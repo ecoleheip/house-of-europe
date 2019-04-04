@@ -16,7 +16,7 @@
     "intro": {
       "heading": "House of Europe",
       "meta": "— par <a href='http://heip.fr' target='_blank'>HEIP</a>",
-      "description": "<p>Vous êtes l'assistante parlementaire d'une députéee Européenne. Equilibrez sens politique, médiatique et relationnel pour conserver votre job et faire interdire le glyphosate.<p>Tous les exemples du jeu sont tirés de faits réels.</p>",
+      "description": "<p>Vous êtes l'assistante parlementaire d'une députée Européenne. Equilibrez sens politique, médiatique et relationnel pour conserver votre job et faire interdire le glyphosate.<p>Tous les exemples du jeu sont tirés de faits réels.</p>",
       "new-game": "Nouvelle partie",
       "continue": "Continuer"
     },
@@ -32,7 +32,7 @@
       "heading": "House of Europe",
       "links": {
         "chats": "Conversations",
-        "hints": "Aide",
+        "hints": "Fiches HEIP",
         "indicators": "Indicateurs",
         "about": "A propos"
       },
@@ -44,7 +44,7 @@
       }
     },
     "hints": {
-      "none": "Aucune aide disponible pour l'instant",
+      "none": "Aucune fiche disponible pour l'instant",
       "description": "Les textes d'aides sont collectés durant le jeu."
     }
   }

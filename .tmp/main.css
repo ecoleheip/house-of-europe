@@ -6685,4 +6685,12 @@ body {
 .background-entry {
   background-image: #003399; }
 
+.logo-heip {
+  height: 10%;
+  width: 10%; }
+  @media (max-width: 767px) {
+    .logo-heip {
+      height: 50%;
+      width: 50%; } }
+
 /*# sourceMappingURL=main.css.map*/
