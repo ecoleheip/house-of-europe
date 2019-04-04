@@ -1,13 +1,13 @@
 {
   "app": {
     "title": "House of Europe",
-    "url": "https://jplusplus.github.io/the-accountant/fr.html",
-    "description": "Pouvez-vous gérer une ville sans céder aux sirènes de la corruption? Tentez votre chance en jouant à House of Europe!",
-    "image": "https://jplusplus.github.io/the-accountant/images/share-fr.png",
+    "url": "https://heip.fr",
+    "description": "Pouvez-vous faire interdirele glyphosate au parlement européen sans céder aux lobbies? Tentez votre chance en jouant à House of Europe!",
+    "image": "",
     "share": {
       "tweet": {
-        "via": "heip_paris",
-        "text": "Combien de temps tiendrez-vous face à la corruption? Tentez votre chance!"
+        "via": "jplusplus_",
+        "text": "Combien de temps tiendrez-vous face aux lobbies? Tentez votre chance!"
       }
     }
   },
@@ -15,8 +15,8 @@
     "back": "Revenir au jeu",
     "intro": {
       "heading": "House of Europe",
-      "meta": "— par <a href='http://www.heip.fr/' target='_blank'>HEIP</a>",
-      "description": "<p>Vous êtes la directrice de cabinet du maire d'une grande ville. Equilibrez éthique, politique et corruption pour conserver votre job.<p>Tous les exemples du jeu sont tirés de faits réels.</p>",
+      "meta": "— par <a href='http://heip.fr' target='_blank'>HEIP</a>",
+      "description": "<p>Vous êtes l'assistante parlementaire d'une députéee Européenne. Equilibrez sens politique, médiatique et relationnel pour conserver votre job et faire interdire le glyphosate.<p>Tous les exemples du jeu sont tirés de faits réels.</p>",
       "new-game": "Nouvelle partie",
       "continue": "Continuer"
     },
