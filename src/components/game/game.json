@@ -75,7 +75,27 @@
       "private": true,
       "category": "risk"
     },
-    "gift_company2": {
+    "leak": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "resolution": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "ice": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "directive": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "farmers_meeting": {
       "value": 0,
       "private": true,
       "category": "choice"
@@ -171,6 +191,17 @@
     },
     "helper": {
       "name@en": "Hélène Labruh",
+      "name@de": "Ferdinanda Salzwedel",
+      "name@fr": "Andrée Lambert",
+      "name@sl": "Mateja Skovir",
+      "title@en": "Assistante Parlementaire",
+      "title@de": "Assistentin",
+      "title@fr": "Assistante",
+      "title@sl": "Vaša asistentka",
+      "avatar": "./images/avatars/helper.jpg"
+    },
+    "policy_advisor": {
+      "name@en": "Paul Hessi",
       "name@de": "Ferdinanda Salzwedel",
       "name@fr": "Andrée Lambert",
       "name@sl": "Mateja Skovir",
@@ -291,95 +322,63 @@
       "texts": [
         {
           "character": "mayor",
-          "text@en": "Bonjour et bienvenue à Bruxelles !",
-          "text@de": "Hallo und herzlich willkommen im Rathaus!",
-          "text@fr": "Bonjour et bienvenue à l'hôtel de ville !",
-          "text@sl": "Pozdravljeni! Dobrodošli v mestni hiši!"
+          "text@en": "Bonjour et bienvenue à Bruxelles !"
         },
         {
           "character": "mayor",
-          "text@en": "Vous êtes ma nouvelle assistante parlementaire.",
-          "text@de": "Sie sind die neue Geschäftsführerin hier, nicht wahr?",
-          "text@fr": "Vous êtes ma nouvelle directrice de cabinet",
-          "text@sl": "Veseli me, da boste pri nas kot vodja občinske uprave."
+          "text@en": "Vous êtes ma nouvelle assistante parlementaire."
         },
         {
           "character": "mayor",
-          "text@en": "Certains disent que le parlement européen est contrôlé par les lobbys. Ne les écoutez pas 😒.",
-          "text@de": "Es gibt Stimmen, die behaupten, die Stadt habe mit Korruption zu kämpfen. Hören Sie einfach nicht hin 😒.",
-          "text@fr": "Certains disent que cette ville est corrompue. Ne les écoutez pas 😒.",
-          "text@sl": "Nekateri pravijo, da je naša občina prepredena s korupcijo. Ne poslušajte jih. 😒"
+          "text@en": "Certains disent que le parlement européen est contrôlé par les lobbys. Ne les écoutez pas 😒."
         },
         {
           "character": "mayor",
-          "text@en": "Mais soyez prudente.",
-          "text@de": "Aber seien Sie auf der Hut!",
-          "text@fr": "Mais soyez prudente.",
-          "text@sl": "A vseeno bodite previdni."
+          "text@en": "Nous allons leur prouver le contraire en faisant interdire le tryphosate."
+        },
+        {
+          "character": "mayor",
+          "text@en": "Les labos profitent d'un vide juridique pour vendre ce nouveau pesticide depuis quelques années."
+        },
+        {
+          "character": "mayor",
+          "text@en": "Je sais que vous êtes déterminée, vous serez parfaite."
         }
       ],
       "choices": [
         {
-          "text@en": "Commencer",
-          "text@de": "Los geht’s",
-          "text@fr": "Commencer",
-          "text@sl": "Začni",
+          "text@en": "Commencer !",
+          "var_changes": {
+            "personal_account": 99
+          },
           "feedback": [
             {
               "character": "you",
-              "text@en": "Merci. Je ferai de mon mieux.",
-              "text@de": "Vielen Dank, Frau Bürgermeisterin. Ich werde mein Bestes geben.",
-              "text@fr": "Merci. Je ferai de mon mieux.",
-              "text@sl": "Hvala, gospa županja. Vsi se bomo trudili po svojih najboljših močeh."
+              "text@en": "Merci. Je ferai de mon mieux."
             },
             {
               "character": "mayor",
-              "text@en": "Vous serez parfaite.",
-              "text@de": "Sie werden sich großartig schlagen.",
-              "text@fr": "Vous serez parfaite.",
-              "text@sl": "Odlično vam bo šlo."
+              "text@en": "Il va falloir connaître les rouages du parlement européen."
             },
             {
               "character": "mayor",
-              "text@en": "Madame Lambert est votre collègue.",
-              "text@de": "Frau Salzwedel ist Ihre Assistentin.",
-              "text@fr": "Madame Lambert est votre assistante.",
-              "text@sl": "Gospa Mateja Skovir je vaša asistentka."
+              "text@en": "Madame Lambert est votre collègue."
             },
             {
               "character": "mayor",
-              "text@en": "Elle connaît bien les procédures législatives.",
-              "text@de": "Sie wird Ihnen alles zeigen.",
-              "text@fr": "Elle connait bien la maison.",
-              "text@sl": "Peljala vas bo na kratek obhod po mestni hiši."
+              "text@en": "Elle connaît bien ce dossier et les procédures législatives."
             },
             {
               "character": "helper",
-              "text@en": "Enchantée.",
-              "text@de": "Hallo!",
-              "text@fr": "Enchantée.",
-              "text@sl": "Pozdravljeni."
+              "text@en": "Enchantée."
             },
             {
               "character": "helper",
-              "text@en": "Je suis là pour vous aider.",
-              "text@de": "Ich werde Ihnen helfen sich zurecht zu finden.",
-              "text@fr": "Je suis là pour vous aider.",
-              "text@sl": "Pomagala vam bo spoznati razmere pri nas."
+              "text@en": "Je suis là pour vous aider."
             },
             {
               "character": "helper",
-              "text@en": "Premier conseil: La député a de puissants amis, ne vous les mettez pas à dos.",
-              "text@de": "Ich gebe Ihnen einen Rat: Die Bürgermeisterin hat einflussreiche Freunde. Verärgern Sie sie nicht.",
-              "text@fr": "Premier conseil: La maire a de puissants amis, ne vous les mettez pas à dos.",
-              "text@sl": "Najboljši nasvet - županja ima precej vplivnih prijateljev. Ne zamerite se jim."
-            },
-            {
-              "character": "helper",
-              "text@en": "Surtout monsieur Tremble.",
-              "text@de": "Vor allem nicht Herrn Meinhardt.",
-              "text@fr": "Surtout monsieur Guillory.",
-              "text@sl": "Še zlasti ne gospodu Mavčarju."
+              "text@en": "Premier conseil: Gardez un oeil sur la commission européenne. C'est là où les choses se passent."
             }
           ]
         }
@@ -388,487 +387,841 @@
     {
       "year": 1994,
       "texts": [
-        {
-          "character": "construction-boss",
-          "text@en": "Bonjour",
-          "text@de": "Wir haben eine Ausschreibung für den Neubau einer Straße veröffentlicht.",
-          "text@fr": "Nous avons passé un appel d'offre pour une nouvelle route.",
-          "text@sl": "Objavili smo poziv k oddaji ponudb za izgradnjo novega cestnega odseka."
-        },
-        {
-          "character": "construction-boss",
-          "text@en": "Je suis un vieil ami de madame la députée",
-          "text@de": "Das Amt für Verkehr hat die Kosten auf ca. 10 Millionen geschätzt.",
-          "text@fr": "Le bureau d'études estime les travaux à 10 millions.",
-          "text@sl": "Naš oddelek za promet ocenjuje, da bodo stroški znašali približno 10 milijonov."
-        }
-      ],
-      "choices": [
-        {
-          "text@en": "Enchanté",
-          "text@de": "Das Angebot der Meinhardt Hoch- u. Tiefbau GmbH liegt bei 12 Millionen.",
-          "text@fr": "Guillory Construction SARL a fait une offre à 12 millions",
-          "text@sl": "Podjetje Mavčar BIRO d.o.o. je pripravilo ponudbo v višini 12 milijonov.",
-          "var_changes": {
-            "gift_company2": 1
+          {
+            "character": "mayor",
+            "text@en": "Je rentre d'une réunion avec les commissaires européens."
           },
-          "feedback": [
-            {
-              "character": "you",
-              "text@en": "Enchanté monsieur Tremble.",
-              "text@de": "Ich habe mich für das Angebot der Meinhardt Hoch- u. Tiefbau GmbH entschieden.",
-              "text@fr": "Je choisis l'offre de Guillory Construction SARL.",
-              "text@sl": "Izbrana je ponudba podjetja Mavčar BIRO. d.o.o."
+          {
+            "character": "mayor",
+            "text@en": "Depuis la dernière étude qui classe le tryphosate comme \"probablement cancérogène\", tout le monde est divisé"
+          },
+          {
+            "character": "you",
+            "text@en": "Comment peuvent-il encore hésiter ?"
+          },
+          {
+            "character": "mayor",
+            "text@en": "Le commissaire à l'agriculture est très influent "
+          },
+          {
+            "character": "mayor",
+            "text@en": "Il nous explique que c'est indispensable pour nos agriculteurs."
+          },
+          {
+            "character": "mayor",
+            "text@en": "Personne ne veut prendre de risque."
+          },
+          {
+            "character": "mayor",
+            "text@en": "C'est très mal parti."
+          },
+          {
+            "character": "you",
+            "text@en": "A ce point?"
+          },
+          {
+            "character": "mayor",
+            "text@en": "Voyez par vous même, je vous ai envoyé le compte rendu de la réunion par email."
+          },
+          {
+            "character": "you",
+            "text@en": "Merci !"
+          },
+          {
+            "character": "mayor",
+            "text@en": "Que me recommandez-vous de faire?"
+          }
+        ],
+        "helper": [
+          {
+            "character": "helper",
+            "text@en": "Tant que rien n'est signé, on peut encore influer sur leur décision."
+          },
+          {
+            "character": "helper",
+            "text@en": "Voici une fiche sur le [rôle de la commission européenne|commissioneu]."
+          },
+          {
+            "character": "helper",
+            "text@en": "Diffuser le document pourrait peut-être mobiliser l’opinion publique et faire pression sur la commission."
+          },
+          {
+            "character": "helper",
+            "text@en": "Mais notre députée risquerait de se mettre à dos les commissaires."
+          }
+        ],
+        "choices": [
+          {
+            "text@en":"Ecrire un tweet et envoyer le compte rendu à la presse",
+            "var_changes": {
+              "personal_account": -33,
+              "risk_police": -2,
+              "risk_political": 2,
+              "leak": 1
             }
-          ]
+          },
+          {
+              "text@en":"Faire profil bas pour l'instant.",
+            "var_changes": {
+              "risk_political": -1
+            }
         }
-      ]
-    },
+        ]
+},
     {
-      "year": 1994,
+      "year": 1995,
       "condition": {
-        "var": "gift_company2",
+        "var": "leak",
         "min": 1
       },
       "texts": [
         {
-          "character": "construction-boss",
-          "text@en": "Je sais que tu veux faire interdire le tryphosate. Nous aussi.",
-          "text@de": "Wir haben drei Einreichungen erhalten. Wählen Sie das beste Angebot aus.",
-          "text@fr": "On a reçu trois offres. Choisissez la meilleure.",
-          "text@sl": "Prejeli smo tri ponudbe. Izberite najboljšo."
-        },
-        {
-          "character": "construction-boss",
-          "text@en": "Nous avons rédigé un amendement pour vous, il est parfait !",
-          "text@de": "Wir haben drei Einreichungen erhalten. Wählen Sie das beste Angebot aus.",
-          "text@fr": "On a reçu trois offres. Choisissez la meilleure.",
-          "text@sl": "Prejeli smo tri ponudbe. Izberite najboljšo."
-        },
-        {
-          "character": "construction-boss",
-          "text@en": "Avec Green&co, on vous aidera à le faire passer, comme ça tout le monde gagne du temps.",
-          "text@de": "Wir haben drei Einreichungen erhalten. Wählen Sie das beste Angebot aus.",
-          "text@fr": "On a reçu trois offres. Choisissez la meilleure.",
-          "text@sl": "Prejeli smo tri ponudbe. Izberite najboljšo."
-        },
-        {
-          "character": "construction-boss",
-          "text@en": "D'ailleurs, tu veux cette BMW ? Je l'ai acheté le mois passé mais je ne m'en sers pas. ",
-          "text@de": "Wir haben drei Einreichungen erhalten. Wählen Sie das beste Angebot aus.",
-          "text@fr": "On a reçu trois offres. Choisissez la meilleure.",
-          "text@sl": "Prejeli smo tri ponudbe. Izberite najboljšo."
-        }
-      ],
-      "helper": [
-        {
-          "character": "helper",
-          "text@en": "Quand on vous offre des cadeaux, [suivez ce guide|gifts].",
-          "text@de": "Wenn Ihnen ein Geschenk angeboten wird, [folgen Sie diesen Regeln|gifts].",
-          "text@fr": "Quand on vous offre des cadeaux, [suivez ce guide|gifts].",
-          "text@sl": "Ko vam ponudijo darilo, se držite [teh smernic|gifts]."
-        }
-      ],
-      "choices": [
-        {
-          "text@en": "Accepter",
-          "text@de": "Sehr gerne.",
-          "text@fr": "Avec plaisir.",
-          "text@sl": "Z veseljem.",
-          "var_changes": {
-            "personal_account": 15000,
-            "risk_police": 2,
-            "risk_contractors": -2
-          },
-          "feedback": [
-            {
-              "character": "construction-boss",
-              "text@en": "Voilà les clés !",
-              "text@de": "Bitte schön! Hier sind die Schlüssel.",
-              "text@fr": "Voilà les clés !",
-              "text@sl": "Izvolite ključe."
-            },
-            {
-              "character": "construction-boss",
-              "text@en": "Je sens que notre collaboration va être fructueuse",
-              "text@de": "Ich glaube wir beide werden gut miteinander auskommen.",
-              "text@fr": "Je sens que notre collaboration va être fructueuse",
-              "text@sl": "Mislim, da se bova dobro razumela."
-            },
-            {
-              "character": "helper",
-              "text@en": "Faites attention avec cette voiture.",
-              "text@de": "Passen Sie auf mit diesem Wagen!",
-              "text@fr": "Faites attention avec cette voiture.",
-              "text@sl": "Bodite previdni s tem dragim avtomobilom."
-            },
-            {
-              "character": "helper",
-              "text@en": "Des gens pourraient se demander d'où elle vient.",
-              "text@de": "Die Leute werden sich fragen wie Sie sich so ein teures Auto leisten können.",
-              "text@fr": "Des gens pourraient se demander d'où elle vient.",
-              "text@sl": "Lahko vas vprašajo, kje ste ga dobili."
-            }
-          ]
-        },
-        {
-          "text@en": "Dénoncer aux autorités européennes",
-          "text@de": "Nein, danke",
-          "text@fr": "Dénoncer aux autorités européennes",
-          "text@sl": "Ne, hvala.",
-          "var_changes": {
-            "risk_contractors": 3,
-            "risk_police": -2
-          },
-          "feedback": [
-            {
-              "character": "you",
-              "text@en": "Non, merci.",
-              "text@de": "Nein danke.",
-              "text@fr": "Non, merci.",
-              "text@sl": "Ne, hvala."
-            },
-            {
-              "character": "you",
-              "text@en": "Je vais être dans l'obligation de prevenir les autorités de vos pratiques.",
-              "text@de": "Nein danke.",
-              "text@fr": "Non, merci.",
-              "text@sl": "Ne, hvala."
-            },
-            {
-              "character": "mayor",
-              "text@en": "C'est comme ça que vous traitez mes amis?",
-              "text@de": "Ich wäre vorsichtig.",
-              "text@fr": "C'est comme ça que vous traitez mes amis?",
-              "text@sl": "Nikar tako prenagljeno."
-            },
-            {
-              "character": "mayor",
-              "text@en": "Dans le futur, soyez plus respectueuse.",
-              "text@de": "Mich willst du nicht zum Feind haben.",
-              "text@fr": "Dans le futur, soyez plus respectueuse.",
-              "text@sl": "Nočete me imeti za sovražnika."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "year": 1995,
-      "texts": [
-        {
-          "character": "football-boss",
-          "text@en": "Bonjour !",
-          "text@de": "Zu mir kommen einfach zu viele Leute, die eine Wohnung aus dem sozialen Wohnbauprogramm haben wollen.",
-          "text@fr": "Bonjour !",
-          "text@sl": "Toliko ljudi me obišče, ker si želijo bivati v neprofitnem stanovanju."
-        },
-        {
-          "character": "football-boss",
-          "text@en": "J’aimerais inviter votre députée à dîner avec d’autres élus et associations anti-tryphosate.",
-          "text@de": "Zu mir kommen einfach zu viele Leute, die eine Wohnung aus dem sozialen Wohnbauprogramm haben wollen.",
-          "text@fr": "J’aimerais inviter votre députée à dîner avec d’autres élus et associations anti-tryphosate.",
-          "text@sl": "Toliko ljudi me obišče, ker si želijo bivati v neprofitnem stanovanju."
-        },
-        {
-          "character": "football-boss",
-          "text@en": "Ce sera l’occasion de se mettre d’accord sur une stratégie !",
-          "text@de": "Können Sie eine Lösung für sie finden?",
-          "text@fr": "Vous pouvez me trouver une solution ?",
-          "text@sl": "Lahko najdete rešitev?"
-        }
-      ],
-      "helper": [
-        {
-          "character": "helper",
-          "text@en": "Ca ressemble à un dîner organisé par des lobbyistes ..",
-          "text@de": "Bestechung ist verboten.",
-          "text@fr": "Ca ressemble à un dîner organisé par des lobbyistes ..",
-          "text@sl": "Podkupnine so prepovedane."
-        },
-        {
-          "character": "helper",
-          "text@en": "Mais attention, il est très important d’obtenir de soutien de cette commissaire",
-          "text@de": "Bestechung ist verboten.",
-          "text@fr": "Mais attention, il est très important d’obtenir de soutien de cette commissaire",
-          "text@sl": "Podkupnine so prepovedane."
-        },
-        {
-          "character": "helper",
-          "text@en": "Je vous ai préparé une fiche sur la fabrique des lois. [Cliquez ici pour le lire |bribes].",
-          "text@de": "Ich haben Ihnen trotzdem mal ein Dossier zusammengestellt. [Klicken Sie hier, um es zu lesen|bribes].",
-          "text@fr": "Je vous ai préparé une fiche sur la fabrique des lois [Cliquez ici pour le lire|bribes].",
-          "text@sl": "Vseeno sem vam pripravila kratko predstavitev. [Za branje kliknite sem|bribes]."
-        }
-      ],
-      "choices": [
-        {
-          "text@en": "Bonne idée ! Cela nous fera gagner plusieurs mois de travail",
-          "text@de": "Bieten Sie Ihnen an für 5.000 in Bar die Anfrage schneller zu bearbeiten.",
-          "text@fr": "Bonne idée ! Cela nous fera gagner plusieurs mois de travail",
-          "text@sl": "Ponudite pospešitev postopka v zameno za 5.000 v kuverti.",
-          "var_changes": {
-            "risk_political": -2,
-            "risk_contractors": -2,
-            "risk_police": 2
-          },
-          "feedback": [
-            {
-              "character": "football-boss",
-              "text@en": "Super !",
-              "text@de": "Ich werde mich darum kümmern.",
-              "text@fr": "Super !",
-              "text@sl": "Vse bo urejeno."
-            },
-            {
-              "character": "football-boss",
-              "text@en": "Ravie de savoir que l’on pourra compter sur votre députée",
-              "text@de": "Ich werde mich darum kümmern.",
-              "text@fr": "Ravie de savoir que l’on pourra compter sur votre députée",
-              "text@sl": "Vse bo urejeno."
-            }
-          ]
-        },
-        {
-          "text@en": "Restons prudents, on ne sait jamais qui peut s’inviter dans ces dîners",
-          "text@de": "Stocken Sie das soziale Wohnungsbauprogramm finanziell auf.",
-          "text@fr": "Restons prudents, on ne sait jamais qui peut s’inviter dans ces dîners",
-          "text@sl": "Povečajte proračun za program neprofitnih stanovanj.",
-          "var_changes": {
-            "risk_political": 4,
-            "risk_contractors": 4
-          },
-          "feedback": [
-            {
-              "character": "mayor",
-              "text@en": "Est-ce qu’on était vraiment obligés de se mettre à dos la commissaire?",
-              "text@de": "Wir werden die Finanzierung für das soziale Wohnungsbauprogramm erhöhen.",
-              "text@fr": "Est-ce qu’on était vraiment obligés de se mettre à dos la commissaire?",
-              "text@sl": "Povečali bomo obseg sredstev za neprofitna stanovanja."
-            },
-            {
-              "character": "mayor",
-              "text@en": "Faites attention, on pourrait finir isolés.",
-              "text@de": "Wir werden die Finanzierung für das soziale Wohnungsbauprogramm erhöhen.",
-              "text@fr": "Faites attention, on pourrait finir isolés.",
-              "text@sl": "Povečali bomo obseg sredstev za neprofitna stanovanja."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "year": 1996,
-      "texts": [
-        {
-          "character":"mayor",
-          "text@en": "Je viens de recevoir un appel.",
-          "text@de": "Guten Tag!",
-          "text@fr": "Je viens de recevoir un appel.",
-          "text@sl": "Zdravo."
+          "character": "mayor",
+          "text@en": "C'est allé beaucoup plus loin que ce que je pensais !"
         },
         {
           "character": "mayor",
-          "text@en": "Elise Lucet est dans les couloirs du parlement elle est en route vers notre bureau.",
-          "text@de": "Ich bin ein alter Freund der Bürgermeisterin.",
-          "text@fr": "Elise Lucet est dans les couloirs du parlement elle est en route vers notre bureau.",
-          "text@sl": "Sem star županjin prijatelj."
+          "text@en": "On ne parle plus que du tryphosate à la TV depuis que le compte rendu a été diffusé!"
         },
         {
           "character": "you",
-          "text@en": "Entendu, je reste a votre disposition pour toutes demandes.",
-          "text@de": "Ich bin ein alter Freund der Bürgermeisterin.",
-          "text@fr": "Entendu, je reste a votre disposition pour toutes demandes.",
-          "text@sl": "Sem star županjin prijatelj."
+          "text@en": "Les gens sont revoltés."
         },
         {
-          "character": "mayor",
-          "text@en": "On me dit qu’elle enquête sur la corruption au sein de la commission européenne.",
-          "text@de": "Ich muss das Trainingscenter meines... ich meine: des städtischen Fußballclubs vergrößern.",
-          "text@fr": "On me dit qu’elle enquête sur la corruption au sein de la commission européenne.",
-          "text@sl": "Razširiti bi bilo treba površine za trening mojega ... hočem reči našega, mestnega nogometnega kluba."
+          "character": "you",
+          "text@en": "La commission ne peut pas autoriser le tryphosate dans ces conditions."
         },
         {
           "character": "helper",
-          "text@en": "Attention, nous avons rencontré des lobbyistes le mois dernier.",
-          "text@de": "Die Stadt besitzt ein unbebautes Grundstück. Ich weiß, dass es für 10 Millionen gehandelt wird. Mir wäre es 4 Millionen wert.",
-          "text@fr": "Attention, nous avons rencontré des lobbyistes le mois dernier.",
-          "text@sl": "Blizu igrišča je večje zemljišče v lasti mesta. Ocenjeno je na 10 milijonov, a se mi zdi, da bi bila bolj primerna cena približno 4 milijone. Kaj menite?"
-        }, 
+          "text@en": "C’est plus compliqué que cela ..."
+        }
+      ],
+      "choices": [
+        {
+        "text@en": "Demander plus d'informations",
+        "feedback": [
         {
           "character": "helper",
-          "text@en": "Même si vous n’avez pas travaillé avec eux directement, elle pourrait vous le reprocher.",
-          "text@de": "Die Stadt besitzt ein unbebautes Grundstück. Ich weiß, dass es für 10 Millionen gehandelt wird. Mir wäre es 4 Millionen wert.",
-          "text@fr": "Même si vous n’avez pas travaillé avec eux directement, elle pourrait vous le reprocher.",
-          "text@sl": "Blizu igrišča je večje zemljišče v lasti mesta. Ocenjeno je na 10 milijonov, a se mi zdi, da bi bila bolj primerna cena približno 4 milijone. Kaj menite?"
-        }, 
+          "text@en": "Le sujet a beaucoup été repris en France et en l’Itale."
+        },
         {
-          "character": "mayor",
-          "text@en": "Je ne veux pas prendre le risque de perdre le soutien des écologistes …",
-          "text@de": "Ich muss das Trainingscenter meines... ich meine: des städtischen Fußballclubs vergrößern.",
-          "text@fr": "Je ne veux pas prendre le risque de perdre le soutien des écologistes …",
-          "text@sl": "Razširiti bi bilo treba površine za trening mojega ... hočem reči našega, mestnega nogometnega kluba."
+          "character": "helper",
+          "text@en": "Les députés Français et Italiens vont nous suivre, c'est un bon pas en avant."
+        },
+        {
+          "character": "helper",
+          "text@en": " Mais je crains que cela ne soit pas suffisant... Le tryphosate intéresse très peu de citoyens dans les autres pays de l’UE"
+        },
+        {
+          "character": "you",
+          "text@en": "Je vois..."
+        },
+        {
+          "character": "you",
+          "text@en": "Il va falloir continuer de leur mettre la pression."
+        },
+        {
+          "character": "helper",
+          "text@en": "Vous avez tout compris!"
+        }
+        ]
+      }
+    ]
+    },
+    {
+      "year": 1996,
+      "condition": {
+        "var": "leak",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character": "football-boss",
+          "text@en": "Bonjour!"
+        },
+        {
+          "character": "football-boss",
+          "text@en": "J'ai votre travail de lanceuse d'alerte sur le tryphosate."
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Heureusement qu'il y a des gens comme vous!"
+        },
+        {
+          "character": "you",
+          "text@en": "Merci, j'ai vu les actions de votre ONG, c'est vraiment génial!"
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Nous voulons faire avancer le combat contre le tryphosate."
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Chez les militants, tout le monde vous adore !"
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Nous sommes en train de travailler sur un projet d'initiative citoyenne européenne contre le tryphosate."
+        },
+        {
+          "character": "football-boss",
+          "text@en": "On adorerait que vous soyez notre ambassadrice. Ca vous dit ?"
         }
       ],
       "helper": [
         {
           "character": "helper",
-          "text@en": "Nous allons devoir affronter une polémique médiatique.",
-          "text@de": "Ich habe für Sie ein Dossier zusammengestellt. [Klicken Sie hier, um es zu lesen|land_sales].",
-          "text@fr": "Nous allons devoir affronter une polémique médiatique.",
-          "text@sl": "Pripravila sem vam predstavitev na to temo. [Kliknite sem|land_sales]."
-        }, 
+          "text@en": "Je vous ai préparé une fiche sur les [initiative citoyenne européenne|ice].."
+        },
         {
           "character": "helper",
-          "text@en": "Je vous ai préparé une fiche sur la communication de crise. [Cliquez ici pour la lire|land_sales].",
-          "text@de": "Ich habe für Sie ein Dossier zusammengestellt. [Klicken Sie hier, um es zu lesen|land_sales].",
-          "text@fr": "Je vous ai préparé une fiche sur la communication de crise. [Cliquez ici pour la lire|land_sales]",
-          "text@sl": "Pripravila sem vam predstavitev na to temo. [Kliknite sem|land_sales]."
+          "text@en": "Si le projet réussi, cela pourrait grandement nous aider, on sera plus légitimes."
+        },
+        {
+          "character": "helper",
+          "text@en": "Si c'est un échec nous perdrons en légitimité, nos adversaires ne l'oublieront pas."
         }
       ],
       "choices": [
         {
-          "text@en": "Eviter Elise Lucet à tout prix",
-          "text@de": "Für 10 Millionen verkaufen.",
-          "text@fr": "Je viens de recevoir un appel.",
-          "text@sl": "Prodaj za 10 milijonov.",
+          "text@en": "Soutenir publiquement l'initiative citoyenne",
           "var_changes": {
-            "risk_contractors": 1,
-            "risk_police": 10
+            "personal_account": 45,
+            "risk_police": 1,
+            "risk_political": 1,
+            "risk_contractors": -1,
+            "ice": 1,
+            "directive":1
           },
           "feedback": [
             {
-              "character": "lawyer",
-              "text@en": "Bonjour Madame Dupont !",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Le terrain est à vous pour 10 millions - non négociable.",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "character": "you",
+              "text@en": "Bonne idée!"
             },
             {
-              "character": "lawyer",
-              "text@en": "Pardon de nous inviter dans le public de votre conférence aujourd’hui !",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Le terrain est à vous pour 10 millions - non négociable.",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "character": "you",
+              "text@en": "Je vais proposer à notre députée de co-signer une tribune avec 27 eurodéputés de 27 pays différents."
             },
             {
-              "character": "lawyer",
-              "text@en": "Mais vous avez refusé toutes nos demandes d’interviews",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Mais vous avez refusé toutes nos demandes d’interviews",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "character": "you",
+              "text@en": "Cela nous fera gagner plusieurs mois de travail."
             },
             {
-              "character": "lawyer",
-              "text@en": "Madame la députée, avez déjà reçu des cadeaux de la part de lobbyistes ?",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Madame la députée, avez déjà reçu des cadeaux de la part de lobbyistes ?",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "character": "football-boss",
+              "text@en": "Ravie de savoir que l’on pourra compter sur votre députée !"
             },
             {
               "character": "mayor",
-              "text@en": "Désolé madame mais ce n’est pas le sujet de la conférence, merci de prendre rdv avec mes assistantes  …",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Désolé madame mais ce n’est pas le sujet de la conférence, merci de prendre rdv avec mes assistantes  …",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "text@en": "Faites attention, on ne sait pas vraiment dans quoi on s'embarque."
             }
           ]
         },
         {
-          "text@en": "Répondre et défendre sa position",
-          "text@de": "Für 4 Millionen verkaufen.",
-          "text@fr": "Répondre et défendre sa position",
-          "text@sl": "Prodajte za 4 milijone.",
+          "text@en": "Ne pas s'afficher.",
           "var_changes": {
-            "risk_political": 3,
-            "risk_police": 2
+            "risk_contractors": 2
           },
           "feedback": [
             {
-              "character": "lawyer",
-              "text@en": "Bonjour Madame Dupont !",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Le terrain est à vous pour 10 millions - non négociable.",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "character": "you",
+              "text@en": "C'est un beau projet ! On vous aidera de l'intérieur du parlement."
             },
             {
-              "character": "lawyer",
-              "text@en": "Merci de bien vouloir répondre à nos questions.",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Le terrain est à vous pour 10 millions - non négociable.",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "character": "football-boss",
+              "text@en": "Je savais que vous étiez comme les autres politiciens."
             },
             {
-              "character": "lawyer",
-              "text@en": "Madame la députée, avez déjà reçu des cadeaux de la part de lobbyistes ?",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Madame la députée, avez déjà reçu des cadeaux de la part de lobbyistes ?",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
+              "character": "football-boss",
+              "text@en": "Vous allez décevoir beaucoup de monde."
             },
             {
               "character": "mayor",
-              "text@en": "Je travaille avec beaucoup de gens",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Je travaille avec beaucoup de gens",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
-            },
-            {
-              "character": "mayor",
-              "text@en": "Et beaucoup de choses peuvent être considérées comme des cadeaux.",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Et beaucoup de choses peuvent être considérées comme des cadeaux.",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
-            }
-          ]
-        },
-        {
-          "text@en": "Répondre partiellement aux questions ",
-          "text@de": "Für 4 Millionen verkaufen.",
-          "text@fr": "Répondre partiellement aux questions ",
-          "text@sl": "Prodajte za 4 milijone.",
-          "var_changes": {
-            "risk_police": 1
-          },
-          "feedback": [
-            {
-              "character": "lawyer",
-              "text@en": "Bonjour Madame Dupont !",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Bonjour Madame Dupont !",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
-            },
-            {
-              "character": "lawyer",
-              "text@en": "Merci de bien vouloir répondre à nos questions.",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Merci de bien vouloir répondre à nos questions.",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
-            },
-            {
-              "character": "lawyer",
-              "text@en": "Madame la députée, avez déjà reçu des cadeaux de la part de lobbyistes ?",
-              "text@de": "Sie können es haben, aber der Preis bleibt bei 10 Millionen. Keine Diskussion.",
-              "text@fr": "Madame la députée, avez déjà reçu des cadeaux de la part de lobbyistes ?",
-              "text@sl": "Zemljišče je lahko vaše, a cena je 10 milijonov, brez pogajanj."
-            },
-            {
-              "character": "mayor",
-              "text@en": "Je travaille avec beaucoup de gens",
-              "text@de": "Ich lasse Ihnen VIP Tickets für’s nächste Spiel zukommen.",
-              "text@fr": "Je travaille avec beaucoup de gens",
-              "text@sl": "Poskrbel bom, da boste prejeli vstopnice za prihodnjo tekmo."
-            },
-            {
-              "character": "mayor",
-              "text@en": "Et beaucoup de choses peuvent être considérées comme des cadeaux.",
-              "text@de": "Ich lasse Ihnen VIP Tickets für’s nächste Spiel zukommen.",
-              "text@fr": "Et beaucoup de choses peuvent être considérées comme des cadeaux.",
-              "text@sl": "Poskrbel bom, da boste prejeli vstopnice za prihodnjo tekmo."
+              "text@en": "Faites attention, on pourrait finir isolés."
             }
           ]
         }
       ]
+    },
+    {
+      "year": 1997,
+      "texts": [
+        {
+          "character":"you",
+          "text@en": "Charlotte ???"
+        },
+        {
+          "character":"you",
+          "text@en": "Mais qu'est-ce que tu fais là ?"
+        },
+        {
+          "character": "lawyer",
+          "text@en": "Salut ! Je ne savais pas que tu bossais au parlement européen toi aussi!"
+        },
+        {
+          "character": "lawyer",
+          "text@en": "Après HEIP j'ai rejoins une eurodéputée en tant que collaboratrice. Mon élue siège au PPE."
+        },
+        {
+          "character": "lawyer",
+          "text@en": "Ça te dit un café toutes les deux? Histoire de prendre des nouvelles?"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Le PPE est un groupe de droite, c'est l'équivalent des Républicains au niveau Européen."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ils sont connus pour soutenir le tryphosate."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur [les groupes politiques au parlement européen|groupespoleu]."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Prendre un café",
+          "var_changes": {
+            "personal_account": 3,
+            "risk_police": 1,
+            "risk_political": 0,
+            "resolution":1,
+            "directive": 1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Avec plaisir! Disons demain?"
+            }
+          ]
+        },
+        {
+          "text@en": "Eviter Charlotte",
+          "var_changes": {
+            "personal_account": -1,
+            "risk_political": -1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Je suis un peu sous l'eau en ce moment. On se recroise à la remise des diplômes?"
+            }
+          ]
+        }
+        ]
+    },
+    {
+      "year": 1998,
+      "condition": {
+        "var": "resolution",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"lawyer",
+          "text@en": "Avec ma députée on travaille sur un sujet qui pourrait t'intéresser, ça concerne l'agriculture"
+        },
+        {
+          "character":"you",
+          "text@en": "Dis m'en plus !"
+        },
+        {
+          "character": "lawyer",
+          "text@en": "On souhaite faire voter un projet de résolution non contraignante autour de sujets liés à la santé de nos aliments."
+        },
+        {
+          "character": "lawyer",
+          "text@en": "On a besoin d'alliés pour atteindre la majorité. Ca vous tente ?"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur la résolution non contraignante"
+        },
+        {
+          "character": "helper",
+          "text@en": "C'est une bonne opportunité pour trouver des alliés pour notre combat contre le tryphosate"
+        },
+        {
+          "character": "helper",
+          "text@en": "mais ... une alliance implique toujours des compromis !"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "En parler avec la députée",
+          "var_changes": {
+            "risk_political": 0
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Ca me semble intéréssant ! Je vais en parler avec elle."
+            }
+          ]
+        },
+        {
+          "text@en": "Ignorer la proposition",
+          "var_changes": {
+            "personal_account": -3,
+            "risk_political": -1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Ca n'est pas trop son style. On bossera ensemble sur d'autres sujets !"
+            }
+          ]
+        }
+        ]
+    },
+    {
+      "year": 1999,
+      "condition": {
+        "var": "risk_political",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"university-boss",
+          "text@en": "Bonjour, Je suis un bon ami de la députée. "
+        },
+        {
+          "character":"university-boss",
+          "text@en": "Je travaille chez Green&Co, avec nos OGMs plus besoin de tryphosate ! "
+        },
+        {
+          "character": "you",
+          "text@en": "Ah ..."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Pas de panique, tout les tests sont formels, nos produits sont 100% sains."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Et surtout, nous avons des intérêts en commun 😉."
+        },
+        {
+          "character": "you",
+          "text@en": "C'est à dire ?"
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Je sais que de plus en plus d'élus vous suivent."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Si vous arrivez à les convaincre de voter l'autorisation de mise sur le marché pour nos graine"
+        },
+        {
+          "character": "university-boss",
+          "text@en": "On fera en sorte que le PPE vote comme vous sur le tryphosate."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Donnant-donnant."
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Je peux comprendre que vous soyez déstabilisée ..."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur le lobbying au parlement européen."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ca semble être une solution concrète."
+        },
+        {
+          "character": "helper",
+          "text@en": "Mais ça peut nous coûter le soutiens des écolos."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Accepter le marché",
+          "var_changes": {
+            "risk_police": 2,
+            "risk_political": 1,
+            "risk_contractors": 3,
+            "personal_account": 182
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Deal."
+            },
+            {
+              "character": "you",
+              "text@en": "Je me charge de convaincre le groupe."
+            }
+          ]
+        },
+        {
+          "text@en": "Refuser poliment.",
+          "var_changes": {
+            "risk_political": -1,
+            "risk_contractors": -1,
+            "personal_account": -18
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Je dois réfléchir. Pouvez-vous m'envoyer vos tests?"
+            }
+          ]
+        }
+        ]
+    },
+    {
+      "year": 2000,
+      "condition": {
+        "var": "directive",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"mayor",
+          "text@en": "la commission a publié sa directive."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont choisi de rester neutres sur le tryphosate et de laisser les députés trancher"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur le processus législatif au parlement européen"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Bravo !",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Bravo !"
+            },
+            {
+              "character": "you",
+              "text@en": "Il faut désormais se battre au parlement."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2001,
+      "condition": {
+        "var": "directive",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"football-boss",
+          "text@en": "Nous avons remarqué la qualité de votre travail jusqu'ici."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "La commission a fait sa proposition sur le tryphosate."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "On vous soutiendra si vous souhaitez devenir rapporteure au sein de la commission."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "On vous soutiendra si vous souhaitez devenir rapporteure au sein de la commission ENVI."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "Mais ça va nous coûter cher en points, si vous acceptez, on va être obligés d'abandonner le projet sur les déchets plastique."
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Je vous ai préparé une fiche sur le fonctionnement des commissions parlementaires."
+        },
+        {
+          "character": "helper",
+          "text@en": "En acceptant, nous aurons plus de contrôle sur les amendements proposés."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ca sera un combat difficile et on y perdra des plumes si cela ne se passe pas comme prévu."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Devenir rapporteure",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Merci pour la proposition !"
+            },
+            {
+              "character": "you",
+              "text@en": "Je pense que notre députée acceptera de devenir rapporteure."
+            }
+          ]
+        },
+        {
+          "text@en": "Devenir shadow-rapporteure",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Merci pour la proposition !"
+            },
+            {
+              "character": "you",
+              "text@en": "Je pense qu'il vaut mieux que notre députée de devienne shadow rapporteure."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2002,
+      "condition": {
+        "var": "directive",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"you",
+          "text@en": "Charlotte ? Mais ..."
+        },
+        {
+          "character":"lawyer",
+          "text@en": "Salut, comme tu le vois j'ai changé de boulot récemment."
+        },
+        {
+          "character":"lawyer",
+          "text@en": "Je travaille désormais pour le syndicat agricole européen."
+        },
+        {
+          "character":"you",
+          "text@en": "Ca te plait ?"
+        },
+        {
+          "character":"lawyer",
+          "text@en": "Oui, c'est passionnant, et très bien payé !"
+        },
+        {
+          "character":"lawyer",
+          "text@en": "On pourrait te recruter après ce vote sur le tryphosate 😉"
+        },
+        {
+          "character":"lawyer",
+          "text@en": "D'ailleurs il faut absolument que tu rencontre les représentants des agriculteurs, je suis certain que vous allez bien vous entendre !"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Charlotte est devenue lobbyiste pour le tryphosate."
+        },
+        {
+          "character": "helper",
+          "text@en": "Je vous ai préparé une fiche sur les revolving doors."
+        },
+        {
+          "character": "helper",
+          "text@en": "Il ne faut pas se mettre les agriculteurs à dos."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ils sont très influents, notamment en Allemagne et en Espagne, deux pays clés si on veut gagner le vote."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Rencontrer les agriculteurs",
+          "var_changes": {
+            "risk_police": 0,
+            "risk_political": 0,
+            "risk_contractors": 2,
+            "personal_account": 0,
+            "farmers_meeting":1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Biensûr, c'est une bonne idée !"
+            },
+            {
+              "character": "you",
+              "text@en": "Merci pour ton aide !"
+            }
+          ]
+        },
+        {
+          "text@en": "Refuser la rencontre",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "C'est gentil, mais nous sommes débordés."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2003,
+      "condition": {
+        "var": "farmers_meeting",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"mayor",
+          "text@en": "Je sors de la visite avec avec les agriculteurs"
+        },
+        {
+          "character":"you",
+          "text@en": "Alors ?"
+        },
+        {
+          "character":"mayor",
+          "text@en": "On a visité un exploitation agricole, c'était très intéressant."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont voulu me montrer par A+B que sans le tryphosate, ils iraient droit à la ruine."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont voulu me montrer par A+B que le tryphosate que sans le tryphosate, ils iraient droit à la ruine."
+        },
+        {
+          "character":"mayor",
+          "text@en": "C'est vrai que leur métier est assez difficile comme ça ..."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Mais je n'aime pas que l'on me prenne par les émotions."
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Dans ce cas on peut toujours s'appuyer sur les policy advisors."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche qui explique leur rôle"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Demander l'avis d'un expert",
+          "feedback": [
+            {
+              "character": "policy_advisor",
+              "text@en": "J'ai bien étudié le dossier."
+            },
+            {
+              "character": "policy_advisor",
+              "text@en": "Il existe d'autres solutions moins risquées que le tryphosate."
+            },
+            {
+              "character": "policy_advisor",
+              "text@en": "Cependant personne n'est capable de les distribuer à l'échelle de l'Europe avant quelques années."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Le public et nos partenaires attendent de nous que l'on négocie une interdiction immédiate."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Je ne sais pas quoi faire ..."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2004,
+      "texts": [
+        {
+          "character":"helper",
+          "text@en": "Je crois qu'on va devoir gérer une crise ..."
+        },
+        {
+          "character":"you",
+          "text@en": "Que se passe-t-il ?"
+        },
+        {
+          "character":"mayor",
+          "text@en": "Les agriculteurs que nous avons rencontrés hier sont en colère."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont décidé de bloquer les autoroutes entre la france et l'espagne pour protester contre l'interdiction du tryphosate."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils disent que vous n'écoutez pas leurs revendications."
+        },
+        {
+          "character":"you",
+          "text@en": "Quel impact est-ce que ça peut avoir?"
+        },
+        {
+          "character":"helper",
+          "text@en": "Ca va être compliqué pour les eurodéputés espagnols de rester avec nous si on reste inflexibles."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Que devons-nous faire?"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Dans ce cas on peut toujours s'appuyer sur les policy advisors."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche qui explique leur rôle"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Proposer un délai de 2 ans",
+          "feedback": [
+            {
+              "character": "mayor",
+              "text@en": "Vous avez raison, il faut savoir faire des compromis."
+            }
+          ]
+        },
+        {
+          "text@en": "Proposer une interdiction immédiate",
+          "feedback": [
+            {
+              "character": "mayor",
+              "text@en": "Vous avez raison, il faut savoir rester cohérent."
+            }
+          ]
+        }
+
+        ]
     }
+
   ],
   "endings": [
     {
@@ -928,16 +1281,10 @@
       "body@de": "Kartelle entstehen, wenn Auftragnehmer ihre Angebot koordinieren. Sollten sich die Preise der Angebote stark ähneln, kann dies ein Hinweis auf eventuelle Absprachen der Unternehmen sein.<br><br>Die Auftragnehmer handeln gemeinsam aus, wer das günstigste Angebot abgeben wird. Der Auftragnehmer, der den Zuschlag erhält, zahlt dann einen Teil des Gewinns an die übrigen Mitglieder des Kartells.<br><br> Es kann jedoch auch vorkommen, dass ein Auftragnehmer das Kartell verlässt und dem Auftraggeber ein günstigeres Angebot unterbreitet. Das kann dann gefährlich werden.",
       "body@fr": "Un cartel apparait quand les candidats à un appel d'offre s'entendent entre eux. Vous pouvez les détecter si les prix des offres se suivent et sont proches les uns des autres.<br><br>Les industriels peuvent s'entendre sur celui qui proposera le prix le plus bas et gagnera l'appel d'offre. Le gagnant paye ensuite les autres membres du cartel. Le cartel fait une rotation entre les entreprises, afin que chaque membre du cartel gagne un peu.<br><br>Parfois, un des membres du cartels fait cavalier seul et fait une offre plus basse. Ça devient dangereux pour lui."
     },
-    "gifts": {
-      "title@en": "How to react to gifts?",
-      "title@de": "Zum Verhalten bei Geschenken",
-      "title@fr": "Comment réagir aux cadeaux ?",
-      "title@sl": "Kako ravnati z darili?",
-      "body@en": "Public officials are usually prohibited from accepting gifts above a certain value (€50 at the European Commission, for instance). However, you can accept the gift if it is intended for you as a private person, or for your spouse. By refusing a gift, you risk angering the person who made it.",
-      "body@de": "Beamten ist es normalerweise verboten, Geschenke oberhalb eines bestimmten Grenzwertes anzunehmen (bei der europäischen Kommission etwa liegt dieser Wert bei 50€). Das heißt, es ist erlaubt ein Geschenk anzunehmen, das an Sie als Privatperson oder an Ihren Lebenspartner adressiert ist. Wenn Sie einen Geschenk ablehnen, kann es den Geschenkgeber ärgern.",
-      "body@fr": "Les fonctionnaires n'ont généralement pas le droit d'accepter des cadeaux au delà d'un certain seuil (50€ à la Commission Européenne, par exemple). Cela dit, vous pouvez accepter le cadeau s'il vous est adressé à vous personnellement, et non pas à vous en tant que fonctionnaire. Ou bien s'il est fait à votre partenaire. En refusant un cadeau, vous prenez le risque d'offenser celui qui vous l'offre.",
-      "body@sl": "Javnim uslužbencem običajno ni dovoljeno prejemati daril nad določeno vrednostjo (npr. med 10 in 500 €). Lahko pa kot zasebnik sprejmete darilo, namenjeno vam ali vašemu partnerju. Če ga zavrnete, lahko razjezite osebo, ki vam ga je ponudila."
-    },
+    "commissioneu": {
+      "title@en": "La comission européenne",
+      "body@en": "La Commission européenne est un organe essentiel du processus décisionnel de l’UE. Elle est composée de 28 commissaires (un par État membre) qui sont l’équivalent de \"ministres européens\".<b>Ce sont les seuls à pouvoir proposer des \"lois\"</b> (que l’on appelle \"règlement\" ou \"directive\") mais les députés peuvent ensuite les modifier et doivent voter pour les valider."
+  },
     "bribes": {
       "title@en": "How can you organize bribes?",
       "title@sl": "Kako organizirati podkupnino?",
