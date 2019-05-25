@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "House of Europe",
+    "url": "https://heip.fr",
+    "description": "Pouvez-vous faire interdirele glyphosate au parlement européen sans céder aux lobbies? Tentez votre chance en jouant à House of Europe!",
+    "image": "",
+    "share": {
+      "tweet": {
+        "via": "jplusplus_",
+        "text": "Combien de temps tiendrez-vous face aux lobbies? Tentez votre chance!"
+      }
+    }
+  },
+  "main": {
+    "back": "Revenir au jeu",
+    "intro": {
+      "heading": "House of Europe",
+      "meta": "— par <a href='http://heip.fr' target='_blank'>HEIP</a>",
+      "description": "<p>Vous êtes l'assistante parlementaire d'une députéee Européenne. Equilibrez sens politique, médiatique et relationnel pour conserver votre job et faire interdire le glyphosate.<p>Tous les exemples du jeu sont tirés de faits réels.</p>",
+      "new-game": "Nouvelle partie",
+      "continue": "Continuer"
+    },
+    "steps": {
+      "undo": "Annuler <span class='hidden-xs-down'>la dernière action</span>",
+      "over": {
+        "undo": "Annuler la dernière action",
+        "again": "Recommencer",
+        "share": "Vous avez amassé <a ui-sref='main.vars'>{{amount}} en {{years}} ans</a>. Partagez votre score!"
+      }
+    },
+    "toolbar": {
+      "heading": "House of Europe",
+      "links": {
+        "chats": "Conversations",
+        "hints": "Fiche heip",
+        "indicators": "Indicateurs",
+        "about": "A propos"
+      },
+      "share": {
+        "label": "Partager",
+        "twitter": "Partager sur Twitter",
+        "facebook": "Partager sur Facebook",
+        "reddit": "Partager sur Reddit"
+      }
+    },
+    "hints": {
+      "none": "Aucune aide disponible pour l'instant",
+      "description": "Les textes d'aides sont collectés durant le jeu."
+    }
+  }
+}

@@ -1,0 +1,1429 @@
+{
+  "vars": {
+    "resources": {
+      "value": 10,
+      "private": false,
+      "category": "city",
+      "chart": "city-financial-health",
+      "label@en": "Resources",
+      "label@de": "Einnahmen",
+      "label@fr": "Revenus",
+      "label@sl": "Dohodki"
+    },
+    "expenditures": {
+      "value": 9,
+      "private": false,
+      "category": "city",
+      "chart": "city-financial-health",
+      "label@en": "Expenditures",
+      "label@de": "Ausgaben",
+      "label@fr": "Dépenses",
+      "label@sl": "Odhodki"
+    },
+    "reserves": {
+      "value": 50,
+      "private": false,
+      "category": "city",
+      "chart": "city-financial-health",
+      "label@en": "Reserves",
+      "label@de": "Rücklagen",
+      "label@fr": "Réserves",
+      "label@sl": "Rezerve"
+    },
+    "personal_account": {
+      "value": 0,
+      "private": false,
+      "category": "player",
+      "chart": true,
+      "label@en": "Député allier",
+      "label@de": "Ihr Bargeld",
+      "label@fr": "Vos gains",
+      "label@sl": "Vaša sredstva"
+    },
+    "risk_police": {
+      "value": 2,
+      "private": false,
+      "icon": "newspaper-o",
+      "category": "risk",
+      "label@en": "Risque médiatique",
+      "label@de": "Juristisches Risiko",
+      "label@fr": "Risque médiatique",
+      "label@sl": "Pravno tveganje"
+    },
+    "risk_contractors": {
+      "value": 2,
+      "private": false,
+      "icon": "industry",
+      "category": "risk",
+      "label@en": "Méfiance des partenaires",
+      "label@de": "Misstrauen der Industrie",
+      "label@fr": "Méfiance des industriels",
+      "label@sl": "Nezaupanje zasebnega sektorja"
+    },
+    "risk_political": {
+      "value": 2,
+      "private": false,
+      "icon": "handshake-o",
+      "category": "risk",
+      "label@en": "Risque politique",
+      "label@de": "Politischer Widerstand",
+      "label@fr": "Risque politique",
+      "label@sl": "Politično nezaupanje"
+    },
+    "risk_revolving_door": {
+      "value": 0,
+      "private": true,
+      "category": "risk"
+    },
+    "leak": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "resolution": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "ice": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "directive": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "farmers_meeting": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "own_company": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "shell_company": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "trash_company": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    },
+    "revolving_door": {
+      "value": 0,
+      "private": true,
+      "category": "choice"
+    }
+  },
+  "charts": {
+    "city-financial-health": {
+      "title@en": "Financial health of the city",
+      "title@de": "Finanzielle Lage der Stadt",
+      "title@fr": "Santé financière de la ville",
+      "title@sl": "Finančno zdravje mesta",
+      "description@en": "City financials tell you how much money the city collects each year (resources) and spends (expenditure), while reserves tell you how much money the city has in the bank.",
+      "description@de": "Diese Indikatoren zeigen wieviele Steuern die Stadt jährlich einnimmt (Einnahmen), wieviel sie ausgibt (Ausgaben) und wieviel sie auf der Bank hat (Rücklagen).",
+      "description@fr": "Ces indicateurs montrent combien la ville collecte en impôts tous les ans (revenus), combien elle dépense (dépenses), et les réserves indiquent combien la ville possède en banque.",
+      "description@sl": "Mestne finance vam povedo, koliko sredstev mesto zbere na leteni ravni (prihodki), koliko porabi (odhodki) in koliko denarja je še naloženega v banki (mestne rezerve)."
+    }
+  },
+  "characters": {
+    "mayor": {
+      "name@en": "Marie Dupont",
+      "name@de": "Marie Meyer",
+      "name@fr": "Claudine Daviau",
+      "name@sl": "Marjeta Pohle",
+      "title@en": "Députée européen",
+      "title@de": "Die Bürgermeisterin",
+      "title@fr": "La maire",
+      "title@sl": "Županja",
+      "avatar": "./images/avatars/mayor.jpg"
+    },
+    "lawyer": {
+      "name@en": "Jamila Ballard",
+      "name@de": "Ekin Krantz",
+      "name@fr": "Nadya Mathieu",
+      "name@sl": "Tanja Pravdar",
+      "title@en": "Your lawyer",
+      "title@de": "Ihre Anwältin",
+      "title@fr": "Votre avocate",
+      "title@sl": "Vaša odvetnica",
+      "avatar": "./images/avatars/lawyer.jpg"
+    },
+    "construction-boss": {
+      "name@en": "Gustave Tremble",
+      "name@de": "Ferdi Meinhardt",
+      "name@fr": "Cyril Guillory",
+      "name@sl": "Robert Mavčar",
+      "title@en": "Directeur des affaires Green&co",
+      "title@de": "Chef von Meinhardt Hoch- u. Tiefbau GmbH",
+      "title@fr": "Chef de Guillory Construction SARL",
+      "title@sl": "Direktor gradbenega podjetja Mavčar Biro d.o.o.",
+      "avatar": "./images/avatars/construction-boss.jpg"
+    },
+    "university-boss": {
+      "name@en": "Adrian Wynn",
+      "name@de": "Halit Beutel",
+      "name@fr": "Rasul Géroux",
+      "name@sl": "prof. dr. Damjan Gabrin",
+      "title@en": "Director of the University",
+      "title@de": "Direktor der Universität",
+      "title@fr": "Directeur de l'université",
+      "title@sl": "Rektor Univerze",
+      "avatar": "./images/avatars/university-boss.jpg"
+    },
+    "football-boss": {
+      "name@en": "Martin Gomez",
+      "name@de": "Wendel Slusser",
+      "name@fr": "Gustave Tremble",
+      "name@sl": "Matjaž Kalinšek a.k.a. Kale",
+      "title@en": "President of the City Football Club",
+      "title@de": "Präsident des städtischen Fußballvereins",
+      "title@fr": "Président du club de football de la ville",
+      "title@sl": "Predsednik mestnega nogometnega kluba",
+      "avatar": "./images/avatars/football-boss.jpg"
+    },
+    "helper": {
+      "name@en": "Hélène Labruh",
+      "name@de": "Ferdinanda Salzwedel",
+      "name@fr": "Andrée Lambert",
+      "name@sl": "Mateja Skovir",
+      "title@en": "Assistante Parlementaire",
+      "title@de": "Assistentin",
+      "title@fr": "Assistante",
+      "title@sl": "Vaša asistentka",
+      "avatar": "./images/avatars/helper.jpg"
+    },
+    "policy_advisor": {
+      "name@en": "Paul Hessi",
+      "name@de": "Ferdinanda Salzwedel",
+      "name@fr": "Andrée Lambert",
+      "name@sl": "Mateja Skovir",
+      "title@en": "Assistante Parlementaire",
+      "title@de": "Assistentin",
+      "title@fr": "Assistante",
+      "title@sl": "Vaša asistentka",
+      "avatar": "./images/avatars/helper.jpg"
+    },
+    "you": {
+      "name@en": "You",
+      "name@de": "Sie",
+      "name@fr": "Assistante Parlementaire",
+      "name@sl": "Ti",
+      "title@en": "Assistante Parlementaire",
+      "title@de": "Geschäftsführerin",
+      "title@fr": "Dir' cab",
+      "title@sl": "Vodja občinske uprave",
+      "avatar": null
+    }
+  },
+  "years": {
+    "1993": {
+      "picture": "images/years/strasbourg.jpg",
+      "title@en": "Rideau",
+      "title@de": "Der Beginn",
+      "title@fr": "Rideau",
+      "title@sl": "Začetek"
+    },
+    "1994": {
+      "picture": "images/years/lobbyiest.jpg",
+      "title@en": "Proposition du Lobbyiste",
+      "title@de": "Erste Schritte",
+      "title@fr": "Proposition du Lobbyiste",
+      "title@sl": "Prvi koraki"
+    },
+    "1995": {
+      "picture": "images/years/restaurant.jpg",
+      "title@en": "Dejeuner ambigu",
+      "title@de": "Wohnbaugeschichten",
+      "title@fr": "Dejeuner ambigu",
+      "title@sl": "Stanovanjske zgodbe"
+    },
+    "1996": {
+      "picture": "images/years/alice_lucet.jpg",
+      "title@en": "Elise Lucet",
+      "title@de": "Ball spielen",
+      "title@fr": "Jeux de ballon",
+      "title@sl": "Igre z žogo"
+    },
+    "1997": {
+      "picture": "images/years/tm.jpeg",
+      "title@en": "Cartel",
+      "title@de": "Kartell",
+      "title@fr": "Cartel",
+      "title@sl": "Kartel"
+    },
+    "1998": {
+      "picture": "images/years/roundabout.jpeg",
+      "title@en": "Growing up",
+      "title@de": "Wachsen",
+      "title@fr": "Devenir grand",
+      "title@sl": "Odraščanje"
+    },
+    "1999": {
+      "picture": "images/years/cpn.jpeg",
+      "title@en": "Be Your Own Boss",
+      "title@de": "Selbstständig werden",
+      "title@fr": "Indépendance",
+      "title@sl": "Sam svoj šef"
+    },
+    "2000": {
+      "picture": "images/years/berlin.jpeg",
+      "title@en": "The Card",
+      "title@de": "Die Karte",
+      "title@fr": "La carte",
+      "title@sl": "Kreditna kartica"
+    },
+    "2001": {
+      "picture": "images/years/cpn-2.jpeg",
+      "title@en": "Adverts",
+      "title@de": "Reklame",
+      "title@fr": "Pubs",
+      "title@sl": "Oglaševanje"
+    },
+    "2002": {
+      "picture": "images/years/atomium.jpeg",
+      "title@en": "Game on",
+      "title@de": "Spielstart",
+      "title@fr": "Coup d'envoi",
+      "title@sl": "Dvojna podaja"
+    },
+    "2003": {
+      "picture": "images/years/gare.jpeg",
+      "title@en": "Invisible",
+      "title@de": "Unsichtbar",
+      "title@fr": "Invisible",
+      "title@sl": "Nevidni"
+    },
+    "2004": {
+      "picture": "images/years/gare.jpeg",
+      "title@en": "Invisible",
+      "title@de": "Unsichtbar",
+      "title@fr": "Invisible",
+      "title@sl": "Nevidni"
+    },
+    "2005": {
+      "picture": "images/years/gare.jpeg",
+      "title@en": "Invisible",
+      "title@de": "Unsichtbar",
+      "title@fr": "Invisible",
+      "title@sl": "Nevidni"
+    }
+  },
+  "steps": [
+    {
+      "year": 1993,
+      "texts": [
+        {
+          "character": "mayor",
+          "text@en": "Bonjour et bienvenue à Bruxelles !"
+        },
+        {
+          "character": "mayor",
+          "text@en": "Vous êtes ma nouvelle assistante parlementaire."
+        },
+        {
+          "character": "mayor",
+          "text@en": "Certains disent que le parlement européen est contrôlé par les lobbys. Ne les écoutez pas 😒."
+        },
+        {
+          "character": "mayor",
+          "text@en": "Nous allons leur prouver le contraire en faisant interdire le tryphosate."
+        },
+        {
+          "character": "mayor",
+          "text@en": "Les labos profitent d'un vide juridique pour vendre ce nouveau pesticide depuis quelques années."
+        },
+        {
+          "character": "mayor",
+          "text@en": "Je sais que vous êtes déterminée, vous serez parfaite."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Commencer !",
+          "var_changes": {
+            "personal_account": 99
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Merci. Je ferai de mon mieux."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Il va falloir connaître les rouages du parlement européen."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Madame Lambert est votre collègue."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Elle connaît bien ce dossier et les procédures législatives."
+            },
+            {
+              "character": "helper",
+              "text@en": "Enchantée."
+            },
+            {
+              "character": "helper",
+              "text@en": "Je suis là pour vous aider."
+            },
+            {
+              "character": "helper",
+              "text@en": "Premier conseil: Gardez un oeil sur la commission européenne. C'est là où les choses se passent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "texts": [
+          {
+            "character": "mayor",
+            "text@en": "Je rentre d'une réunion avec les commissaires européens."
+          },
+          {
+            "character": "mayor",
+            "text@en": "Depuis la dernière étude qui classe le tryphosate comme \"probablement cancérogène\", tout le monde est divisé"
+          },
+          {
+            "character": "you",
+            "text@en": "Comment peuvent-il encore hésiter ?"
+          },
+          {
+            "character": "mayor",
+            "text@en": "Le commissaire à l'agriculture est très influent "
+          },
+          {
+            "character": "mayor",
+            "text@en": "Il nous explique que c'est indispensable pour nos agriculteurs."
+          },
+          {
+            "character": "mayor",
+            "text@en": "Personne ne veut prendre de risque."
+          },
+          {
+            "character": "mayor",
+            "text@en": "C'est très mal parti."
+          },
+          {
+            "character": "you",
+            "text@en": "A ce point?"
+          },
+          {
+            "character": "mayor",
+            "text@en": "Voyez par vous même, je vous ai envoyé le compte rendu de la réunion par email."
+          },
+          {
+            "character": "you",
+            "text@en": "Merci !"
+          },
+          {
+            "character": "mayor",
+            "text@en": "Que me recommandez-vous de faire?"
+          }
+        ],
+        "helper": [
+          {
+            "character": "helper",
+            "text@en": "Tant que rien n'est signé, on peut encore influer sur leur décision."
+          },
+          {
+            "character": "helper",
+            "text@en": "Voici une fiche sur le [rôle de la commission européenne|commissioneu]."
+          },
+          {
+            "character": "helper",
+            "text@en": "Diffuser le document pourrait peut-être mobiliser l’opinion publique et faire pression sur la commission."
+          },
+          {
+            "character": "helper",
+            "text@en": "Mais notre députée risquerait de se mettre à dos les commissaires."
+          }
+        ],
+        "choices": [
+          {
+            "text@en":"Ecrire un tweet et envoyer le compte rendu à la presse",
+            "var_changes": {
+              "personal_account": -33,
+              "risk_police": -2,
+              "risk_political": 2,
+              "leak": 1
+            }
+          },
+          {
+              "text@en":"Faire profil bas pour l'instant.",
+            "var_changes": {
+              "risk_political": -1
+            }
+        }
+        ]
+},
+    {
+      "year": 1995,
+      "condition": {
+        "var": "leak",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character": "mayor",
+          "text@en": "C'est allé beaucoup plus loin que ce que je pensais !"
+        },
+        {
+          "character": "mayor",
+          "text@en": "On ne parle plus que du tryphosate à la TV depuis que le compte rendu a été diffusé!"
+        },
+        {
+          "character": "you",
+          "text@en": "Les gens sont revoltés."
+        },
+        {
+          "character": "you",
+          "text@en": "La commission ne peut pas autoriser le tryphosate dans ces conditions."
+        },
+        {
+          "character": "helper",
+          "text@en": "C’est plus compliqué que cela ..."
+        }
+      ],
+      "choices": [
+        {
+        "text@en": "Demander plus d'informations",
+        "feedback": [
+        {
+          "character": "helper",
+          "text@en": "Le sujet a beaucoup été repris en France et en l’Itale."
+        },
+        {
+          "character": "helper",
+          "text@en": "Les députés Français et Italiens vont nous suivre, c'est un bon pas en avant."
+        },
+        {
+          "character": "helper",
+          "text@en": " Mais je crains que cela ne soit pas suffisant... Le tryphosate intéresse très peu de citoyens dans les autres pays de l’UE"
+        },
+        {
+          "character": "you",
+          "text@en": "Je vois..."
+        },
+        {
+          "character": "you",
+          "text@en": "Il va falloir continuer de leur mettre la pression."
+        },
+        {
+          "character": "helper",
+          "text@en": "Vous avez tout compris!"
+        }
+        ]
+      }
+    ]
+    },
+    {
+      "year": 1996,
+      "condition": {
+        "var": "leak",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character": "football-boss",
+          "text@en": "Bonjour!"
+        },
+        {
+          "character": "football-boss",
+          "text@en": "J'ai votre travail de lanceuse d'alerte sur le tryphosate."
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Heureusement qu'il y a des gens comme vous!"
+        },
+        {
+          "character": "you",
+          "text@en": "Merci, j'ai vu les actions de votre ONG, c'est vraiment génial!"
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Nous voulons faire avancer le combat contre le tryphosate."
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Chez les militants, tout le monde vous adore !"
+        },
+        {
+          "character": "football-boss",
+          "text@en": "Nous sommes en train de travailler sur un projet d'initiative citoyenne européenne contre le tryphosate."
+        },
+        {
+          "character": "football-boss",
+          "text@en": "On adorerait que vous soyez notre ambassadrice. Ca vous dit ?"
+        }
+      ],
+      "helper": [
+        {
+          "character": "helper",
+          "text@en": "Je vous ai préparé une fiche sur les [initiative citoyenne européenne|ice].."
+        },
+        {
+          "character": "helper",
+          "text@en": "Si le projet réussi, cela pourrait grandement nous aider, on sera plus légitimes."
+        },
+        {
+          "character": "helper",
+          "text@en": "Si c'est un échec nous perdrons en légitimité, nos adversaires ne l'oublieront pas."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Soutenir publiquement l'initiative citoyenne",
+          "var_changes": {
+            "personal_account": 45,
+            "risk_police": 1,
+            "risk_political": 1,
+            "risk_contractors": -1,
+            "ice": 1,
+            "directive":1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Bonne idée!"
+            },
+            {
+              "character": "you",
+              "text@en": "Je vais proposer à notre députée de co-signer une tribune avec 27 eurodéputés de 27 pays différents."
+            },
+            {
+              "character": "you",
+              "text@en": "Cela nous fera gagner plusieurs mois de travail."
+            },
+            {
+              "character": "football-boss",
+              "text@en": "Ravie de savoir que l’on pourra compter sur votre députée !"
+            },
+            {
+              "character": "mayor",
+              "text@en": "Faites attention, on ne sait pas vraiment dans quoi on s'embarque."
+            }
+          ]
+        },
+        {
+          "text@en": "Ne pas s'afficher.",
+          "var_changes": {
+            "risk_contractors": 2
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "C'est un beau projet ! On vous aidera de l'intérieur du parlement."
+            },
+            {
+              "character": "football-boss",
+              "text@en": "Je savais que vous étiez comme les autres politiciens."
+            },
+            {
+              "character": "football-boss",
+              "text@en": "Vous allez décevoir beaucoup de monde."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Faites attention, on pourrait finir isolés."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "texts": [
+        {
+          "character":"you",
+          "text@en": "Charlotte ???"
+        },
+        {
+          "character":"you",
+          "text@en": "Mais qu'est-ce que tu fais là ?"
+        },
+        {
+          "character": "lawyer",
+          "text@en": "Salut ! Je ne savais pas que tu bossais au parlement européen toi aussi!"
+        },
+        {
+          "character": "lawyer",
+          "text@en": "Après HEIP j'ai rejoins une eurodéputée en tant que collaboratrice. Mon élue siège au PPE."
+        },
+        {
+          "character": "lawyer",
+          "text@en": "Ça te dit un café toutes les deux? Histoire de prendre des nouvelles?"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Le PPE est un groupe de droite, c'est l'équivalent des Républicains au niveau Européen."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ils sont connus pour soutenir le tryphosate."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur [les groupes politiques au parlement européen|groupespoleu]."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Prendre un café",
+          "var_changes": {
+            "personal_account": 3,
+            "risk_police": 1,
+            "risk_political": 0,
+            "resolution":1,
+            "directive": 1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Avec plaisir! Disons demain?"
+            }
+          ]
+        },
+        {
+          "text@en": "Eviter Charlotte",
+          "var_changes": {
+            "personal_account": -1,
+            "risk_political": -1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Je suis un peu sous l'eau en ce moment. On se recroise à la remise des diplômes?"
+            }
+          ]
+        }
+        ]
+    },
+    {
+      "year": 1998,
+      "condition": {
+        "var": "resolution",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"lawyer",
+          "text@en": "Avec ma députée on travaille sur un sujet qui pourrait t'intéresser, ça concerne l'agriculture"
+        },
+        {
+          "character":"you",
+          "text@en": "Dis m'en plus !"
+        },
+        {
+          "character": "lawyer",
+          "text@en": "On souhaite faire voter un projet de résolution non contraignante autour de sujets liés à la santé de nos aliments."
+        },
+        {
+          "character": "lawyer",
+          "text@en": "On a besoin d'alliés pour atteindre la majorité. Ca vous tente ?"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur la résolution non contraignante"
+        },
+        {
+          "character": "helper",
+          "text@en": "C'est une bonne opportunité pour trouver des alliés pour notre combat contre le tryphosate"
+        },
+        {
+          "character": "helper",
+          "text@en": "mais ... une alliance implique toujours des compromis !"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "En parler avec la députée",
+          "var_changes": {
+            "risk_political": 0
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Ca me semble intéréssant ! Je vais en parler avec elle."
+            }
+          ]
+        },
+        {
+          "text@en": "Ignorer la proposition",
+          "var_changes": {
+            "personal_account": -3,
+            "risk_political": -1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Ca n'est pas trop son style. On bossera ensemble sur d'autres sujets !"
+            }
+          ]
+        }
+        ]
+    },
+    {
+      "year": 1999,
+      "condition": {
+        "var": "risk_political",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"university-boss",
+          "text@en": "Bonjour, Je suis un bon ami de la députée. "
+        },
+        {
+          "character":"university-boss",
+          "text@en": "Je travaille chez Green&Co, avec nos OGMs plus besoin de tryphosate ! "
+        },
+        {
+          "character": "you",
+          "text@en": "Ah ..."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Pas de panique, tout les tests sont formels, nos produits sont 100% sains."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Et surtout, nous avons des intérêts en commun 😉."
+        },
+        {
+          "character": "you",
+          "text@en": "C'est à dire ?"
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Je sais que de plus en plus d'élus vous suivent."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Si vous arrivez à les convaincre de voter l'autorisation de mise sur le marché pour nos graine"
+        },
+        {
+          "character": "university-boss",
+          "text@en": "On fera en sorte que le PPE vote comme vous sur le tryphosate."
+        },
+        {
+          "character": "university-boss",
+          "text@en": "Donnant-donnant."
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Je peux comprendre que vous soyez déstabilisée ..."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur le lobbying au parlement européen."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ca semble être une solution concrète."
+        },
+        {
+          "character": "helper",
+          "text@en": "Mais ça peut nous coûter le soutiens des écolos."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Accepter le marché",
+          "var_changes": {
+            "risk_police": 2,
+            "risk_political": 1,
+            "risk_contractors": 3,
+            "personal_account": 182
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Deal."
+            },
+            {
+              "character": "you",
+              "text@en": "Je me charge de convaincre le groupe."
+            }
+          ]
+        },
+        {
+          "text@en": "Refuser poliment.",
+          "var_changes": {
+            "risk_political": -1,
+            "risk_contractors": -1,
+            "personal_account": -18
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Je dois réfléchir. Pouvez-vous m'envoyer vos tests?"
+            }
+          ]
+        }
+        ]
+    },
+    {
+      "year": 2000,
+      "condition": {
+        "var": "directive",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"mayor",
+          "text@en": "la commission a publié sa directive."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont choisi de rester neutres sur le tryphosate et de laisser les députés trancher"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche sur le processus législatif au parlement européen"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Bravo !",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Bravo !"
+            },
+            {
+              "character": "you",
+              "text@en": "Il faut désormais se battre au parlement."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2001,
+      "condition": {
+        "var": "directive",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"football-boss",
+          "text@en": "Nous avons remarqué la qualité de votre travail jusqu'ici."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "La commission a fait sa proposition sur le tryphosate."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "On vous soutiendra si vous souhaitez devenir rapporteure au sein de la commission."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "On vous soutiendra si vous souhaitez devenir rapporteure au sein de la commission ENVI."
+        },
+        {
+          "character":"football-boss",
+          "text@en": "Mais ça va nous coûter cher en points, si vous acceptez, on va être obligés d'abandonner le projet sur les déchets plastique."
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Je vous ai préparé une fiche sur le fonctionnement des commissions parlementaires."
+        },
+        {
+          "character": "helper",
+          "text@en": "En acceptant, nous aurons plus de contrôle sur les amendements proposés."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ca sera un combat difficile et on y perdra des plumes si cela ne se passe pas comme prévu."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Devenir rapporteure",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Merci pour la proposition !"
+            },
+            {
+              "character": "you",
+              "text@en": "Je pense que notre députée acceptera de devenir rapporteure."
+            }
+          ]
+        },
+        {
+          "text@en": "Devenir shadow-rapporteure",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Merci pour la proposition !"
+            },
+            {
+              "character": "you",
+              "text@en": "Je pense qu'il vaut mieux que notre députée de devienne shadow rapporteure."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2002,
+      "condition": {
+        "var": "directive",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"you",
+          "text@en": "Charlotte ? Mais ..."
+        },
+        {
+          "character":"lawyer",
+          "text@en": "Salut, comme tu le vois j'ai changé de boulot récemment."
+        },
+        {
+          "character":"lawyer",
+          "text@en": "Je travaille désormais pour le syndicat agricole européen."
+        },
+        {
+          "character":"you",
+          "text@en": "Ca te plait ?"
+        },
+        {
+          "character":"lawyer",
+          "text@en": "Oui, c'est passionnant, et très bien payé !"
+        },
+        {
+          "character":"lawyer",
+          "text@en": "On pourrait te recruter après ce vote sur le tryphosate 😉"
+        },
+        {
+          "character":"lawyer",
+          "text@en": "D'ailleurs il faut absolument que tu rencontre les représentants des agriculteurs, je suis certain que vous allez bien vous entendre !"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Charlotte est devenue lobbyiste pour le tryphosate."
+        },
+        {
+          "character": "helper",
+          "text@en": "Je vous ai préparé une fiche sur les revolving doors."
+        },
+        {
+          "character": "helper",
+          "text@en": "Il ne faut pas se mettre les agriculteurs à dos."
+        },
+        {
+          "character": "helper",
+          "text@en": "Ils sont très influents, notamment en Allemagne et en Espagne, deux pays clés si on veut gagner le vote."
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Rencontrer les agriculteurs",
+          "var_changes": {
+            "risk_police": 0,
+            "risk_political": 0,
+            "risk_contractors": 2,
+            "personal_account": 0,
+            "farmers_meeting":1
+          },
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "Biensûr, c'est une bonne idée !"
+            },
+            {
+              "character": "you",
+              "text@en": "Merci pour ton aide !"
+            }
+          ]
+        },
+        {
+          "text@en": "Refuser la rencontre",
+          "feedback": [
+            {
+              "character": "you",
+              "text@en": "C'est gentil, mais nous sommes débordés."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2003,
+      "condition": {
+        "var": "farmers_meeting",
+        "min": 1
+      },
+      "texts": [
+        {
+          "character":"mayor",
+          "text@en": "Je sors de la visite avec avec les agriculteurs"
+        },
+        {
+          "character":"you",
+          "text@en": "Alors ?"
+        },
+        {
+          "character":"mayor",
+          "text@en": "On a visité un exploitation agricole, c'était très intéressant."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont voulu me montrer par A+B que sans le tryphosate, ils iraient droit à la ruine."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont voulu me montrer par A+B que le tryphosate que sans le tryphosate, ils iraient droit à la ruine."
+        },
+        {
+          "character":"mayor",
+          "text@en": "C'est vrai que leur métier est assez difficile comme ça ..."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Mais je n'aime pas que l'on me prenne par les émotions."
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Dans ce cas on peut toujours s'appuyer sur les policy advisors."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche qui explique leur rôle"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Demander l'avis d'un expert",
+          "feedback": [
+            {
+              "character": "policy_advisor",
+              "text@en": "J'ai bien étudié le dossier."
+            },
+            {
+              "character": "policy_advisor",
+              "text@en": "Il existe d'autres solutions moins risquées que le tryphosate."
+            },
+            {
+              "character": "policy_advisor",
+              "text@en": "Cependant personne n'est capable de les distribuer à l'échelle de l'Europe avant quelques années."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Le public et nos partenaires attendent de nous que l'on négocie une interdiction immédiate."
+            },
+            {
+              "character": "mayor",
+              "text@en": "Je ne sais pas quoi faire ..."
+            }
+          ]
+        }
+
+        ]
+    },
+    {
+      "year": 2004,
+      "texts": [
+        {
+          "character":"helper",
+          "text@en": "Je crois qu'on va devoir gérer une crise ..."
+        },
+        {
+          "character":"you",
+          "text@en": "Que se passe-t-il ?"
+        },
+        {
+          "character":"mayor",
+          "text@en": "Les agriculteurs que nous avons rencontrés hier sont en colère."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils ont décidé de bloquer les autoroutes entre la france et l'espagne pour protester contre l'interdiction du tryphosate."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Ils disent que vous n'écoutez pas leurs revendications."
+        },
+        {
+          "character":"you",
+          "text@en": "Quel impact est-ce que ça peut avoir?"
+        },
+        {
+          "character":"helper",
+          "text@en": "Ca va être compliqué pour les eurodéputés espagnols de rester avec nous si on reste inflexibles."
+        },
+        {
+          "character":"mayor",
+          "text@en": "Que devons-nous faire?"
+        }
+      ],
+      "helper":[
+        {
+          "character": "helper",
+          "text@en": "Dans ce cas on peut toujours s'appuyer sur les policy advisors."
+        },
+        {
+          "character": "helper",
+          "text@en": "Voici une fiche qui explique leur rôle"
+        }
+      ],
+      "choices": [
+        {
+          "text@en": "Proposer un délai de 2 ans",
+          "feedback": [
+            {
+              "character": "mayor",
+              "text@en": "Vous avez raison, il faut savoir faire des compromis."
+            }
+          ]
+        },
+        {
+          "text@en": "Proposer une interdiction immédiate",
+          "feedback": [
+            {
+              "character": "mayor",
+              "text@en": "Vous avez raison, il faut savoir rester cohérent."
+            }
+          ]
+        }
+
+        ]
+    }
+
+  ],
+  "endings": [
+    {
+      "condition": {
+        "var": "risk_political",
+        "min": 2
+      },
+      "text@en": "<h2>You're fired: You lost!</h2><p>You managed to have good relations with the contractors and to avoid the police, but your choices have made you unpopular. The mayor requests a career change for you. You're now in charge of welcoming guests at the city museum. How culturally enriching!</p>",
+      "text@de": "<h2>Sie haben verloren!</h2><p>Sie haben zwar gute Beziehungen zur Industrie und zur Polizei aufgebaut, aber Ihre Entscheidungen haben Sie unbeliebt gemacht. Die Bürgermeisterin hat dafür gesorgt, dass Sie versetzt werden. Sie arbeiten jetzt an der Kasse des Städtischen Museums. Wie bereichernd!</p>",
+      "text@fr": "<h2>Perdu: Vous êtes virée !</h2><p>Vous avez entretenu de bonnes relations avec les industriels et avec la police, mais vos choix vous ont rendu impopulaire. La maire exige que vous soyez mutée. Vous travaillez maintenant à l'accueil du musée municipal. C'est très enrichissant !</p>",
+      "text@sl": "<h2>Odpuščeni ste: izgubili ste!</h2><p>Uspeli ste obdržati dobre odnose z izvajalci iz zasebnega sektorja in se izogniti policiji, a so vas vaše odločitve stale priljubljenosti. Županja je zahtevala vašo zamenjavo. Končali ste v službi vratarja v mestnem muzeju. Kako kulturno navdihujoče!</p>"
+    },
+    {
+      "condition": {
+        "var": "risk_police",
+        "min": 0
+      },
+      "text@en": "<h2>C’est la goutte d’eau qui fait déborder le vase. Vous avez perdu !</h2><p>Un scandale médiatique se déclenche et il vaut mieux se faire discret quelques temps.Elles préfèrent passer par Jean Dupont, votre rival.La partie est finie, il vaut mieux travailler sur un autre projet.</p>",
+      "text@de": "<h2>Sie haben verloren!</h2><p>Gegen Sie wurde ein Ermittlungsverfahren eingeleitet. Sie haben zwar gute Beziehungen zur Bürgermeisterin und zu den Industriellen aufgebaut, aber die Finanzbehörde ermittelt gegen Sie wegen Veruntreuung öffentlicher Gelder. Kein Grund zur Panik, Sie werden mit hoher Wahrscheinlichkeit nicht im Gefängnis landen. Aber die Bürgermeisterin verlangt Ihren Rücktritt.</p>",
+      "text@fr": "<h2>Perdu: Vous êtes mise en examen !</h2><p>Vous avez entretenu de bonnes relations avec le maire et avec les industriels, mais un enquêteur du parquet financier vous inculpe dans une affaire de détournement de fonds publics. Pas de panique, vous n'irez sans doute pas en prison. Mais la maire exige votre démission.</p>",
+      "text@sl": "<h2>Ujeli so vas: izgubili ste!</h2><p>Ohranili ste dobre odnose z izvajalci iz zasebnega sektorja in vašo priljubljenost. Županji ste pri srcu, a protikorupcijska policija vas je obtožila zlorabe javnih sredstev. Verjetno vam ne bo treba v zapor, a županja vseeno zahteva vaš odstop."
+    },
+    {
+      "condition": {
+        "var": "risk_contractors",
+        "min": 2
+      },
+      "text@en": "<h2>Plus personne n’a confiance en vous. Vous avez perdu ! </h2><p>Les associations de citoyens et les entreprises concernées par la réforme se méfient de vous.Elles préfèrent travailler avec Jean Dupont, votre rival.La partie est finie, il vaut mieux travailler sur un autre projet</p>",
+      "text@fr": "<h2>Perdu: Vous changez de poste !</h2><p>Vous avez entretenu de bonnes relations avec le maire et avec la police, mais Guillory réclame votre départ. Il dit qu'il ne peut pas travailler avec vous. La maire vous mute aux Parcs et Jardins. Quelle joie de travailler au grand air !</p>",
+      "text@sl": "<h2>Sprememba delovnega mesta: izgubili ste!</h2><p>Izvajalci javnih del v službi mesta so se županji pritožili, da ne morejo delati z vami. Premestili so vas na oddelek za parke in vrtove. Kako čudovito, da lahko sedaj delate zunaj.</p>"
+    },
+    {
+      "condition": {
+        "var": "risk_revolving_door",
+        "min": 1
+      },
+      "text@en": "<h2>New career: You won!</h2><p>Robert Construction Limited makes you an offer you can't refuse, if only to ensure the financial well-being of your spouse and children. Bye-bye, public sector! Hello, business!</p>",
+      "text@de": "<h2>Sie haben gewonnen!</h2><p> Sie machen Karriere! Ferdi Meinhardt macht Ihnen ein Angebot, das Sie nicht ausschlagen können. Tschüss, öffentlicher Sektor! Und: Hallo, Privatwirtschaft!</p>",
+      "text@fr": "<h2>Gagné: Nouvelle carrière !</h2><p>Cyril Guillory vous fait une proposition qui ne se refuse pas. Au revoir, secteur public! Bonjour, secteur privé !</p>",
+      "text@sl": "Nova kariera: zmagali ste!</h2><p>Robert Mavčar Biro d.o.o. vam je dal ponudbo, ki je ne boste zavrnili - pa čeprav zgolj zavoljo finačnega stanja vaše družine. Nasvidenje, javna uprava, živel biznis!</p> "
+    },
+    {
+      "text@en": "<h2>Celebrating 20 years</h2><p>How time flies! 20 years already! In just another 20, you can be in retirement.</p>",
+      "text@de": "<h2>20-jähriges Dienstjubiläum! </h2><p>Wie schnell die Zeit vergeht! Sie sind nun schon seit 20 Jahren im Amt. Nur noch 20 weitere Jahre bis zur Rente! Herzlichen Glückwunsch.</p>",
+      "text@fr": "<h2>Déjà 20 ans de carrière</h2><p>Comme le temps passe ! Déjà 20 ans à ce poste. Encore 20 ans et vous pourrez prendre votre retraite.</p>",
+      "text@sl": "<h2>Dvajseta obletnica na delovnem mestu</h2><p>Kako čas leti! Že čez novih dvajset let ste lahko v pokoju.</p>"
+    }
+  ],
+  "explainers": {
+    "cartel": {
+      "title@en": "How to spot a cartel?",
+      "title@de": "Was sind die Merkmale eines Kartells?",
+      "title@fr": "Comment détecter un cartel ?",
+      "title@sl": "Kako zaznati kartelno delovanje?",
+      "body@sl": "Karteli se pojavijo, ko ponudniki uskladijo svoje ponudbe. Običajno se jih da zaznati, ko so cene različnih ponudb med seboj izjemno blizu.<br><br>Ponudniki se zedinijo, kdo bo imel najnižjo ceno in posledično dobil posel. Zmagovalec nato izplača še preostale člane.<br><br>Včasih se en od ponudnikov odloči zapustiti kartel in sam da nižjo ponudbo. To zna biti nevarno.",
+      "body@en": "Cartels appear when contractors coordinate their offers. You can spot it when the prices of the offers to a public tender are close to one another.<br><br>Contractors agree who will have the lowest price and win the bid. The winner then pays off other members of the cartel.<br><br>Sometimes, a contractor leaves the cartel and makes a lower offer. It can be dangerous.",
+      "body@de": "Kartelle entstehen, wenn Auftragnehmer ihre Angebot koordinieren. Sollten sich die Preise der Angebote stark ähneln, kann dies ein Hinweis auf eventuelle Absprachen der Unternehmen sein.<br><br>Die Auftragnehmer handeln gemeinsam aus, wer das günstigste Angebot abgeben wird. Der Auftragnehmer, der den Zuschlag erhält, zahlt dann einen Teil des Gewinns an die übrigen Mitglieder des Kartells.<br><br> Es kann jedoch auch vorkommen, dass ein Auftragnehmer das Kartell verlässt und dem Auftraggeber ein günstigeres Angebot unterbreitet. Das kann dann gefährlich werden.",
+      "body@fr": "Un cartel apparait quand les candidats à un appel d'offre s'entendent entre eux. Vous pouvez les détecter si les prix des offres se suivent et sont proches les uns des autres.<br><br>Les industriels peuvent s'entendre sur celui qui proposera le prix le plus bas et gagnera l'appel d'offre. Le gagnant paye ensuite les autres membres du cartel. Le cartel fait une rotation entre les entreprises, afin que chaque membre du cartel gagne un peu.<br><br>Parfois, un des membres du cartels fait cavalier seul et fait une offre plus basse. Ça devient dangereux pour lui."
+    },
+    "commissioneu": {
+      "title@en": "La comission européenne",
+      "body@en": "La Commission européenne est un organe essentiel du processus décisionnel de l’UE. Elle est composée de 28 commissaires (un par État membre) qui sont l’équivalent de \"ministres européens\".<b>Ce sont les seuls à pouvoir proposer des \"lois\"</b> (que l’on appelle \"règlement\" ou \"directive\") mais les députés peuvent ensuite les modifier et doivent voter pour les valider."
+  },
+    "bribes": {
+      "title@en": "How can you organize bribes?",
+      "title@sl": "Kako organizirati podkupnino?",
+      "title@de": "Bestechungen",
+      "title@fr": "Comment organiser des pots-de-vin ?",
+      "body@en": "Bribery is not as common in Europe as in other parts of the world, but it is rampant is some sectors. In public housing, some officials ask for enveloppes of money to be given directly. For car inspection, some service centers will be pleased if you leave a gift or bills of cash on the passenger seat.<br><br>Read more under <a href='http://www.cookingbudgets.com/good-ol-bribe/' target='_blank'>A Good Ol' Bribe</a> at Cooking Budgets.",
+      "body@de": "In Europa ist Bestechung nicht so weit verbreitet wie in anderen Regionen der Welt, mit Ausnahme bestimmter Bereiche. Im sozialen Wohungsbau oder bei Fahrzeuguntersuchungen sind Bestechungen durchaus üblich.<br><br>Mehr zum Thema erfahren Sie unter <a href='http://www.cookingbudgets.com/good-ol-bribe/' target='_blank'>A Good Ol' Bribe</a> von Cooking Budgets.",
+      "body@fr": "Les bakchichs ne sont pas aussi fréquents en Europe que dans d'autres régions du monde, à l'exception de certains secteurs. Pour déterminer qui obtient un logement social, certains fonctionnaires n'hésitent pas à demander des enveloppes d'argent de la main à la main. Pour passer le contrôle technique automobile, certains centres de contrôle ferment les yeux en échange d'un cadeau sur le siège passager.<br><br>Lisez <a href='http://www.cookingbudgets.com/good-ol-bribe/' target='_blank'>A Good Ol' Bribe</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "Podkupnine v EU niso tako pogoste kot v drugih delih sveta, a so vseeno precej razbohotene v določenih sektorjih. Na področju neprofitnih stanovanj želijo nekateri uradniki gotovino neposredno v kuverti. Pri tehničnih pregledih avtomobilov se pred pregledom bankovce pogosto pusti na zadnjem sedežu.<br><br>Več o tem si preberite na <a href='http://www.cookingbudgets.com/good-ol-bribe/' target='_blank'>A Good Ol' Bribe</a> pri Cooking Budgets."
+    },
+    "land_sales": {
+      "title@en": "Spotting corruption in land sales",
+      "title@de": "Korruption bei Grundstücksverkäufen",
+      "title@sl": "Korupcija pri prodaji nepremičnin",
+      "title@fr": "La corruption dans les ventes immobilières",
+      "body@en": "Cities often own large plots of land. They can either sell them at market prices or at lower prices, to make a gift to the buyer. It is usually hard to spot such transactions, because there isn't much of a market for big sales of land in a city.",
+      "body@de": "Städte sind häufig im Besitz großer Grundstücke und Immobilien. Diese können zu Marktpreisen verkauft werden oder aber zu günstigeren Konditionen, etwa um für potentielle Käufer zusätzliche Anreize zu schaffen. Solche Gefallen sind äußerst schwierig aufzudecken, denn häufig gibt es gar keinen Markt für zumeist große Gebäude oder Grundstücke im Stadtzentrum. Es fällt daher entsprechend schwer den Marktpreis zu bestimmen.",
+      "body@fr": "Les villes possèdent souvent des terrains et des immeubles. Ces biens peuvent être vendus au prix du marché ou à des prix plus bas, pour faire un cadeau à l'acheteur. Il est fort difficile d'identifier ces transactions frauduleuses car, le plus souvent, il n'existe pas vraiment de marché pour un immeuble entier ou un grand terrain en centre ville.",
+      "body@sl": "Občine imajo pogosto v lasti večja zemljišča. Ta lahko prodajo po tržnih cenah, ali pa jih po nižji ceni prijateljsko ponudijo določenemu kupcu. Običajno je težko določiti, za kakšen primer gre, saj na trgu ni veliko kupcev za tovrstna zemljišča."
+    },
+    "conflicts_of_interest": {
+      "title@en": "Conflicts of interest",
+      "title@sl": "Nasprotje interesov",
+      "title@de": "Interessenkonflikt",
+      "title@fr": "Conflits d'intérêts",
+      "body@en": "People in politics or in the administration can own companies that receive public contracts. In some countries, it is forbidden for companies owned by public servants or politiciants to receive money from public contracts.",
+      "body@de": "Beamte und Politiker können Firmen besitzen, die von öffentlichen Ausschreibungen profitieren. In bestimmten Ländern ist es zwar verboten, dass eine Firma, die einem Politiker gehört, öffentliche Aufträge annimmt. Das kann jedoch mit Hilfe einer Strohfirma recht einfach umgangen werden.",
+      "body@fr": "Des élus ou des fonctionnaires peuvent posséder des entreprises qui bénéficient de contrats publics. Dans certains pays, ce mélange des genres est interdit, mais le bénéficiaire final d'une société peut toujours être masqué par un prête-nom ou par une société-écran.",
+      "body@sl": "Zaposleni v politiki ali javni upravi so lahko lastniki podjetij, ki sklepajo posle z javno upravo. V nekaterih državah je to zakonsko prepovedano."
+    },
+    "credit_card": {
+      "title@en": "Using the official credit card",
+      "title@de": "Kreditkarten im öffentlichen Sektor",
+      "title@fr": "Utiliser la carte bleue officielle",
+      "title@sl": "Uporaba službene kreditne kartice",
+      "body@sl": "Uporaba službene kartice za zasebne namene je lahko zelo mamljiva. A to porabo je zelo lahko izslediti, zato je takšno početje lahko precej nevarno.<br><br>Več na <a href='http://www.cookingbudgets.com/the-credit-card/' target='_blank'>The Credit Card</a> pri Cooking Budgets.",
+      "body@en": "It can be tempting to use the credit card of the city or the government to buy stuff for you. Because it's very easy to trace, it can be dangerous!<br><br>Read more under <a href='http://www.cookingbudgets.com/the-credit-card/' target='_blank'>The Credit Card</a> at Cooking Budgets.",
+      "body@de": "Eine Kreditkarte, die direkt mit der Staatskasse verbunden ist, kann schon verführerisch sein. Da aber die damit getätigten Einkäufe sehr leicht nachverfolgt werden können, birgt sie auch ihre Gefahren!<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/the-credit-card/' target='_blank'>The Credit Card</a> von Cooking Budgets.",
+      "body@fr": "On peut être tenté d'utiliser la carte bleue de sa mairie ou de son gouvernement pour faire ses courses. Mais comme les dépenses en carte sont très faciles à tracer, cela peut être dangereux!<br><br>Lisez <a href='http://www.cookingbudgets.com/the-credit-card/' target='_blank'>The Credit Card</a> [en anglais] sur Cooking Budgets pour en savoir plus."
+    },
+    "ads": {
+      "title@en": "Political communication using public funds",
+      "title@de": "Politische Werbung durch den Einsatz öffentlicher Gelder",
+      "title@sl": "Politično komuniciranje z uporabo javnih sredstev",
+      "title@fr": "La communication politique sur fonds publics",
+      "body@en": "Politicians can control public companies, either directly or through patronage networks. They might require them to buy advertising in newspapers that advertise their performance as a politician and not the company itself. It's very hard for prosecutors to prove that the advertising was not done in the interest of the company.<br><br>Read more under <a href='http://www.cookingbudgets.com/ads/' target='_blank'>Ads, ads, ads</a> at Cooking Budgets.",
+      "body@de": "Politiker können ihren Einfluß auf öffentliche Organisationen und Firmen und Firmen sowohl direkt als auch durch sogenannten Klientelismus ausüben. So können Sie etwa von Firmen verlangen Werbung für Sie zu machen. Für den Staatsanwalt ist es dabei äußerst schwierig nachzuweisen, dass die Firma nicht aus Eigeninteresse handelt.<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/ads/' target='_blank'>Ads, ads, ads</a> von Cooking Budgets.",
+      "body@fr": "Les élus peuvent contrôler des sociétés publiques, soit directement, soit via des liens de clientélisme. Ils peuvent demander à ces sociétés d'acheter des espaces publicitaires dans des journaux pour faire faire leur propre promotion. C'est très difficile pour un procureur de prouver que la publicité était faite dans l'intérêt de l'élu et non pas dans l'intérêt de la société elle-même.<br><br>Lisez <a href='http://www.cookingbudgets.com/ads/' target='_blank'>Ads, ads, ads</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "Politiki lahko nadzorujejo javna podjetja neposredno ali prek mreže zaupnikov. Od njih lahko zahtevajo zakup oglasnega prostora, s katerim se nato oglašuje njihovo politično delovanje in ne delovanja podjetja. Tožilcem je izjemno težko dokazati, da oglaševanje ni bilo v skladu z interesi podjetja.<br><br>Več na <a href='http://www.cookingbudgets.com/ads/' target='_blank'>Ads, ads, ads</a> pri Cooking Budgets."
+    },
+    "emphyteutic": {
+      "title@en": "Leasing public space to private companies",
+      "title@de": "Die Vermietung öffentlicher Immobilien",
+      "title@sl": "Oddajanje javnih površin zasebnim podjetjem",
+      "title@fr": "Louer des biens publics à des sociétés privées",
+      "body@en": "The easiest way to support a private company for a politician is to buy their building with public funds and rent it back to the company at a low price. The operation is hard to trace and fully legal.<br><br>Read more under <a href='http://www.cookingbudgets.com/the-emphyteutic-scam/' target='_blank'>The Emphyteutic Scam</a> at Cooking Budgets.",
+      "body@de": "Der einfachste Weg für einen Politiker, eine private Firma zu unterstützen ist, eines ihrer Gebäude zu kaufen, und es anschließend an sie zu vermieten. Solche Operationen sind schwer nach zu verfolgen und völlig legal.<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/the-emphyteutic-scam/' target='_blank'>The Emphyteutic Scam</a> von Cooking Budgets.",
+      "body@fr": "L'une des manières les plus simples pour un élu ou un fonctionnaire de subventionner une société privée est de lui acheter un bien immobilier puis de la lui louer à un très bas prix. L'opération est complexe à tracer et complètement légale.<br><br>Lisez <a href='http://www.cookingbudgets.com/the-emphyteutic-scam/' target='_blank'>The Emphyteutic Scam</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "Najlažji način za podporo politika zasebnemu podjetju je odkup nepremičnine od podjetja, ki se mu jo nato ponudi v najem za nizko ceno. Operacijo je težko izslediti, hkrati pa je povsem legalna.<br><br>Read more under <a href='http://www.cookingbudgets.com/the-emphyteutic-scam/' target='_blank'>The Emphyteutic Scam</a> at Cooking Budgets."
+    },
+    "fake": {
+      "title@en": "Fake public contracts",
+      "title@de": "Scheinaufträge",
+      "title@fr": "Les faux contrats publics",
+      "title@sl": "Lažna naročila",
+      "body@en": "It can happen that contracts are passed to renovate a place or a road that does not exist. It can be risky, because it is easy to prove the contract is bogus.<br><br>Read more under <a href='http://www.cookingbudgets.com/the-invisible-public-work/' target='_blank'>The Invisible Public Work</a> at Cooking Budgets.",
+      "body@de": "Manchmal kommt es vor, dass Aufträge vergeben werden, um nicht-existierende Straßen zu renovieren oder eine Software zu aktualisieren, die gar nicht genutzt wird. Das ist jedoch ausnahmsweise recht leicht nachzuweisen und daher riskant.<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/the-invisible-public-work/' target='_blank'>The Invisible Public Work</a> von Cooking Budgets.",
+      "body@fr": "Il arrive parfois que des administrations passent des appels d'offres pour rénover des routes qui n'existent pas ou pour mettre à jour des logiciels fantômes. C'est risqué, car il est facile de prouver que le contrat est un faux.<br><br>Lisez <a href='http://www.cookingbudgets.com/the-invisible-public-work/' target='_blank'>The Invisible Public Work</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "Včasih se zgodi, da javna uprava prične obnovo ulice ali ceste, ki sploh ne obstaja. Tovrstno početje je nevarno, saj je zelo lahko dokazati, da gre za goljufijo.<br><br>Več na <a href='http://www.cookingbudgets.com/the-invisible-public-work/' target='_blank'>The Invisible Public Work</a> pri Cooking Budgets."
+    },
+    "ppp": {
+      "title@en": "Public-private partnerships",
+      "title@de": "Öffentlich-Private Partnerschaften",
+      "title@fr": "Les partenariats public-privé",
+      "title@sl": "Javno-zasebna partnerstva",
+      "body@en": "Since the 1980's, it is popular for public administrations to do public-private partnerships. Such partnerships involve a private company doing some of the work, usually building a equipment or operating it, while the administration contributes to the costs. In exchange, the private company can keep the revenues of the equipment it built.<br><br>The goal was to allow public administrations to provide public services without spending much money. In practice, private companies take almost no risks with such contracts and public administrations end up paying as much as they would have without the partnership. But it is usually hidden in the accounts of the public administration.<br><br>Read more under <a href='http://www.cookingbudgets.com/the-public-private-partnership/' target='_blank'>The Public-Private Partnership</a> at Cooking Budgets.",
+      "body@de": "Seit den 80er-Jahren sind die sogenannten Öffentlich-Private Partnerschaften (ÖPP) in Mode. Dahinter steckt die Idee, dass private Firmen die Kosten und das Risiko eines Projekts mit dem öffentlichen Sektor teilen. Dafür bekommen die Firmen einen Teil der Einnahmen des Projekts zurückerstattet.<br><br> Das Ziel dabei ist, dass der öffentliche Sektor ohne finanziellen Mehraufwand höhere Investitionen tätigen kann. Tatsächlich gehen private Firmen aber ohnehin fast kein Risiko ein, weil sie vom öffentlichen Sektor entsprechende Garantien verlangen. Im Endeffekt zahlt der öffentliche Sektor daher oft mehr als er ohne die ÖPP gezahlt hätte.<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/the-public-private-partnership/' target='_blank'>The Public-Private Partnership</a> von Cooking Budgets.",
+      "body@fr": "Depuis les années 1980, les partenariats public-privé sont à la mode. Un tel partenariat implique qu'une société privée réalise un investissement, en général la construction d'un équipement public (route, stade, pont). En échange, la société privée peut garder tout ou partie des revenus d'exploitation de l'équipement.<br><br>L'objectif était que les administrations puissent investir dans de nouveaux équipements sans rien payer. En réalité, les administrations s'engagent souvent à payer un loyer à la société privée, dont le montant total dépasse la valeur de l'investissement ! Comme ces loyers sont étalés dans le temps, on ne voit pas que le partenariat public-privé a en fait coûté plus cher à la collectivité qu'un investissement traditionnel.<br><br>Lisez <a href='http://www.cookingbudgets.com/the-public-private-partnership/' target='_blank'>The Public-Private Partnership</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "Od osemdesetih let so priljubljena t.i. javno-zasebna partnerstva. V takih partnerstvih zasebno podjetje izvede del naročila, javna uprava pa prispeva h kritju stroškov. V zameno lahko podjetje obdrži prihodke od nove storitve/nepremičnine/opreme, ki jo je razvilo. <br><br>Cilj teh partnerstev je bil nižanje javnih stroškov in hkratno razvijanje javne infrastrukture. V praksi pa zasebniki skorajda ne nosijo tveganja, javna uprava pa za storitev plača enako ceno, kot bi jo brez partnerstva, vendar je to običajno skrito v računovodskih izkazih.<br><br> Več na <a href='http://www.cookingbudgets.com/the-public-private-partnership/' target='_blank'>The Public-Private Partnership</a> pri Cooking Budgets."
+    },
+    "privatization": {
+      "title@en": "Deregulation and privatization",
+      "title@de": "Liberalisierung und Privatisierung",
+      "title@fr": "Libéralisation et privatisation",
+      "title@sl": "Liberalizacija in privatizacija",
+      "body@en": "Public administrations have transfered a lot of their competencies to private companies, either via public-private partnerships or via deregulation. It offers a lot of opportunities for conflicts of interests.<br><br>It is hard to know how much a service costs to the city because it can involve people from different departments (e.g some municipal employees can work for the trash collection one day and for another department the next). To do such estimates would require analytical accounting, which cities rarely do.",
+      "body@de": "Die Regierungen haben viele Kompetenzen an private Unternehmen übertragen, sei es durch öffentlich-private Partnerschaften oder durch das Outsourcing von Dienstleistungen. Doch jede Interaktion mit einem privaten Unternehmen birgt die Gefahr von Interessenkonflikten.<br><br>Es ist äußerst schwierig für die Städtische Verwaltung herauszufinden wie viel eine Dienstleistung kostet und ob die von den privaten Dienstleitern in Rechnung gestellten Kosten angemessen sind. Präzise Kalkulationen setzen eine analytische Buchführung voraus, die von den Städten nur selten durchgeführt wird.",
+      "body@fr": "Les administrations publiques ont transféré de nombreuses compétences à des sociétés privées, que ce soit via des partenariats public-privé ou via l'externalisation de services. Chaque interaction avec une société privée offre de nouvelles possibilités de conflits d'intérêts.<br><br>Il est difficile pour une ville de savoir combien un service coûte et de comparer ce coût avec le prix payé à une société privée, car la fourniture d'un service public implique souvent plusieurs départements (par exemple, un employé municipal peut travailler à la collecte des ordures un jour et aux jardins un autre jour). Faire de telles estimations nécessite une comptabilité analytique, ce que les villes font rarement.",
+      "body@sl": "javna uprava je veliko svojih dejavnosti prenesla na zasebna podjetja - ali s pomočjo javno-zasebnih partnerstev, ali pa z deregulacijo, kar je pogost razlog, za nasprotje interesov.<br><br>Poznavanje stroškov posamezne dejavnosti je za občine velikokrat oteženo, saj lahko pri njej sodelujejo ljudje z različnih oddelkov (npr. nekateri delajo na oddelku za javne površine, drugi pa pri kakšnem drugem oddelku). Analitičnega računovostva, ki bi bilo potrebno v takšnih primerih, pa se občine običajno ne poslužujejo."
+    },
+    "fine_print": {
+      "title@en": "The fine print in public contracts",
+      "title@de": "Das Kleingedruckte",
+      "title@sl": "Drobni tisk pri pogodbah z javno upravo",
+      "title@fr": "Le détail des contrats publics",
+      "body@en": "Building contracts usually involve a series of clauses, such as penalties for delays. However, the client (in this case, the city) must activate the clause, or, if the contractor refuses to pay, take it to court. Legal teams are used to such situations, but for a small administration, or in case of politically sensitive issues, it is easy to ignore some clauses in the contract.",
+      "body@de": "Bauverträge enthalten normalerweise eine Vielzahl von Klauseln, wie z.B. den Verspätungszuschlag. Der Auftraggeber (in diesem Fall, die Stadt) sollte diese Klausel berücksichtigen und wenn der Auftragnehmer nicht zahlt, einen entsprechenden Prozess anstreben. Rechtsabteilungen von privaten Firmen sind an das Prozedere gewöhnt, aber kleineren Städten fehlen häufig die Ressourcen für eine Schadensersatzklage. Auch im Fall politisch sensibler Themen ist eine Klage häufig zu riskant und das Anliegen wird lieber unter den Tisch gekehrt.",
+      "body@fr": "Les contrats de construction publique ont en général de nombreuses clauses, comme des pénalités de retard. Pour qu'elles prennent effet, le client (en l'occurence, la ville), doit activer la clause, ou, si l'industriel refuse de payer, l'assigner en justice. Ces situations sont normales pour des équipes de juristes aguérris, mais, pour des petites villes, ou sur des sujets politiquement sensibles, il est plus facile de les ignorer.",
+      "body@sl": "Gradbene pogodbe običajno vključujejo nize določil, kot so penali za zamude. Vendar se morajo občine, ki imajo pogosto majhno ševilo usposobljenih zaposlenih, odločiti, da bodo sprožile postopke na podlagi ustreznih določil na sodišču. Zaradi pomanjkanja znanja ali politične občutljivosti se pogosto zgodi, da se kršitve določil raje ignorira."
+    },
+    "degrees": {
+      "title@en": "Selling university degrees",
+      "title@de": "Der Verkauf von Universitätsdiplomen",
+      "title@fr": "La vente de diplômes",
+      "title@sl": "Prodaja univerzitetnih diplom",
+      "body@en": "The sale of university degree is not uncommon in Europe. As with any story of corruption, people have an incentive to keep silent, because it would make the whole university look bad if it became news.<br><br>Read more under <a href='http://www.cookingbudgets.com/grilled-degrees/' target='_blank'>The Grilled Degrees</a> at Cooking Budgets.",
+      "body@de": "Der Handel mit Hochschulzugangsberechtigungen ist in Europa nichts Ungewöhnliches. Wie seit jeher in der Geschichte der Korruption, haben die beteiligten Personen ein außerordentliches Interesse daran über die Sache Stillschweigen zu bewahren, um ihre eigene und die Reputation der Hochschule zu wahren. Es liegt ein Band des Schweigens über den ehren Mauern der Universitäten. Der Handel mit akademischen Titeln ist daher nur sehr schwer aufzudecken.<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/grilled-degrees/' target='_blank'>The Grilled Degrees</a> von Cooking Budgets.",
+      "body@fr": "La vente de diplômes et la vente du droit d'entrée à l'université ne sont pas rares en Europe. Comme toujours dans les histoires de corruption, les personnes impliquées ont intérêt à garder le silence car c'est la réputation de toute l'université qui serait impactée si un scandale devait voir le jour. Lisez <a href='http://www.cookingbudgets.com/grilled-degrees/' target='_blank'>The Grilled Degrees</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "Prodaja univerzitetnih diplom tudi v EU ni neobičajna. Kot pri vsaki drugi korupcijski zgodbi so ljudje motivirani, da molčijo, saj bi se sicer celotna univerza, na kateri so prejeli diplomo, v javnosti znašla v slabi luči. <br><br>Več na <a href='http://www.cookingbudgets.com/grilled-degrees/' target='_blank'>The grilled degrees</a> pri Cooking Budgets."
+    },
+    "accounting_tricks": {
+      "title@en": "Accounting tricks",
+      "title@de": "Buchhaltungstricks",
+      "title@sl": "Računovodski triki",
+      "title@fr": "Astuces comptables",
+      "body@en": "Contrary to popular belief, accounting is very flexible. It has to be flexible, because it needs to honestly represent the financial situation of an institutions and specific situations can be very different from one another.<br><br>One trick consists in considering that all future revenues from a specific revenue stream are actually just one big sum of money that can be accounted for as a lump sum, even if it is paid later.<br><br>Read more under <a href='http://www.cookingbudgets.com/the-capitalized-rents/' target='_blank'>The Capitalized Rents</a> at Cooking Budgets.",
+      "body@de": "Entgegen der landläufigen Meinung ist die Buchhaltung eine recht flexible Angelegenheit. Ja sie muss sogar flexibel sein, um sich an die jeweils spezifische Situation einer Organisation anpassen zu können. Doch kann diese Flexibilität ebenso gut missbraucht werden.<br><br>Ein Buchhalter kann beispielsweise alle zukünftigen Einnahmen aus einem Objekt als Einmalzahlung verbuchen. Das ist manchmal legitim, etwa wenn Aktien verkauft werden. Bei Mieteinnahmen aus Sozialwohnungen ist dieses Prozedere hingegen unzulässig.<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/the-capitalized-rents/' target='_blank'>The Capitalized Rents</a> von Cooking Budgets.",
+      "body@fr": "Contrairement à une idée reçue, la comptabilité est très flexible. Elle doit être flexible car elle doit s'adapter à la situation de chaque institution. Cette flexibilité peut être utilisée à mauvais escient.<br><br>Une astuce comptable consiste à considérer que tous les revenus futurs d'un bien en location ne sont en fait qu'une seule somme d'argent qui peut être comptabilisée d'un coup, même si elle sera payée dans le futur.<br><br>Lisez <a href='http://www.cookingbudgets.com/the-capitalized-rents/' target='_blank'>The Capitalized Rents</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "V nasprotju s splošnim prepričanjem je računovodstvu zelo fleksibilno. Fleksibilnost je nujna, saj mora računovodstvo realno odražati finančno situacijo institucij, ki so si med seboj lahko izjemno različne.<br><br>Z enim od trikov se vse bodoče prihodke zavede v obliki povprečnine v tem trenutku, čeprav bodo dejansko na računu šele v prihodnosti.<br><br> Več na <a href='http://www.cookingbudgets.com/the-capitalized-rents/' target='_blank'>The Capitalized Rents</a> pri Cooking Budgets."
+    },
+    "relatives": {
+      "title@en": "Hiring relatives",
+      "title@de": "Vetternwirtschaft",
+      "title@sl": "Zaposlovanje sorodnikov",
+      "title@fr": "Embaucher des proches",
+      "body@en": "In some countries, it is forbidden to hire a relative as an assistant. While it might not be a legal risk (after all, your spouse might be the most qualified person for a job), it is a political one. It is safer to ask one of the companies you're in friendly terms with to do the hire (you can then award a public contract to the company in question to finance the new position).",
+      "body@de": "In mänchen Ländern ist es der öffentlichen Verwaltung untersagt Familienangehörige einzustellen. Selbst wenn es kein juristisches Risiko birgt (ihr Partner kann der Beste für den Job sein), so besteht ein politisches Restrisiko. Um Ihre Verwandten zu versorgen tun Sie besser daran bei einer Ihnen wohlgesonnenen Firma anzufragen. Zum Dank können Sie der Firma einen Auftrag erteilen, so dass die für die neue Stelle benötigten Gelder rasch zur Verfügungen stehen.",
+      "body@fr": "Dans certains pays, il est interdit d'embaucher des proches en tant qu'assistant. Quand bien même il n'y aurait pas de risque légal (après tout, votre partenaire peut être le plus qualifié pour le job), cela reste un risque politique. Pour caser vos proches, il vaut mieux demander à une société avec laquelle vous êtes en bons termes de l'embaucher (vous pouvez ensuite donner un contrat public à cette société pour financer le nouveau poste qu'elle a du créer).",
+      "body@sl": "V nekaterih državah je prepovedano za asistente najemati sorodnike. Ni nujno protizakonito (saj je lahko vaš partner dejansko najbolj kvalificirana oseba za določen položaj), vendar je vedno politično občutljivo. Bolj varno je sorodnika zaposliti pri enem od prijateljskih podjetij, ki se jim nato zagotovi pogodba z mestom/občino z za določen posel."
+    },
+    "door": {
+      "title@en": "The Revolving Door",
+      "title@de": "Das Stellenkarussell",
+      "title@sl": "Vrtljiva vrata",
+      "title@fr": "Le pantouflage",
+      "body@en": "After a career in the administration, public officials can be invited to work in the private sectors. Their contacts and their in-depth knowledge of how an administration works are very valuable for a private company. Sometimes, the promise of having a plump job is enough to convince a public official to take a decision in favor of a private company.<br><br>Read more under <a href='http://www.cookingbudgets.com/the-revolving-door/' target='_blank'>The Revolving Door</a> at Cooking Budgets.",
+      "body@de": "Im Anschluss an eine Karriere im öffentlichen Sektor werden hohen Beamten häufig Stellen in der Privatwirtschaft angeboten. Ihre Kontakte und ihr Fachwissen werden dort sehr geschätzt. Und manchmal genügt schon ein in Aussicht gestellter hoher Posten, um einen Beamten ausreichend zu beeinflussen noch während seiner Amtszeit Entscheidungen zu treffen, die dem Unternehmen zu Gute kommen.<br><br>Mehr zum Thema finden Sie unter <a href='http://www.cookingbudgets.com/the-revolving-door/' target='_blank'>The Revolving Door</a> von Cooking Budgets.",
+      "body@fr": "Après une carrière dans l'administration publique, certains fonctionnaires sont invités à travailler dans le secteur privé. Leurs contacts et leur connaissance du fonctionnement de l'administration sont très utiles à une société privée. Parfois, la promesse de recevoir un poste bien doté suffit à convaincre un élu ou un fonctionnaire de prendre une décision favorable à cette société privée.<br><br>Lisez <a href='http://www.cookingbudgets.com/the-revolving-door/' target='_blank'>The Revolving Door</a> [en anglais] sur Cooking Budgets pour en savoir plus.",
+      "body@sl": "Po karieri v javni upravi se javni uslužbenci lahko zaposlijo v zasebnem sektorju. Njihovi kontakti in globinsko poznavanje delovanja uprave so zelo dragoceni za zasebna podjetja. Včasih je dovolj že obljuba dobre službe, da javni uslužbenec sprejme odločitev v korist določenega podjetja. <br><br>Read more under <a href='http://www.cookingbudgets.com/the-revolving-door/' target='_blank'>The Revolving Door</a> pri Cooking Budgets."
+    }
+  }
+}
